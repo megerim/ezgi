@@ -159,13 +159,13 @@ export default function FeaturesBlocks() {
   const [isHovered, setIsHovered] = useState(false);
   const [position, setPosition] = useState({ left: 0, top: 0 });
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const left = e.clientX - rect.left;
     const top = e.clientY - rect.top;
 
     setPosition({ left, top });
-  };
+};
 
   return (
     <section className="relative">
