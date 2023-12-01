@@ -121,7 +121,7 @@ export default function Footer() {
 
               <li className="ml-4">
                 <a
-                  href="whatsapp://send?phone=0000000000"
+                  href="whatsapp://send?phone=+905436715805"
                   className="flex justify-center items-center text-gray-600 hover:text-green-700 bg-white hover:bg-green-500 ring-green-600 ring-1 hover:ring-2  rounded-full shadow transition duration-300 ease-in-out"
                   aria-label="Whatsapp"
                 >
