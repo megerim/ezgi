@@ -6,17 +6,16 @@ const SubmitButton: React.FC = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const [position, setPosition] = useState({ left: 0, top: 0 });
 
-  const handleMouseMove: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+  const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const left = e.clientX - rect.left;
     const top = e.clientY - rect.top;
-
+  
     setPosition({ left, top });
   };
-
+  
   return (
     <div
-      type="submit"
       className="relative w-full bg-indigo-600 blur p-4 text-white outline-none overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
