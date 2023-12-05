@@ -32,7 +32,7 @@ export default function MyModal() {
     "success" | "error" | "idle"
   >("idle");
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
