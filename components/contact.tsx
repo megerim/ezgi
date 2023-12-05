@@ -15,11 +15,11 @@ const Contact = () => {
               </div>
               <div className="lg:w-1/3 px-6 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-gray-900 text-xs">EMAIL</h2>
-                <p className="text-indigo-500 leading-relaxed">zeynepezgikaya94@gmail.com</p>
-                <a href="#" className="text-blue-900">Mail Adresini Kopyala</a>
+                <p className="text-indigo-500 leading-relaxed underline pointer">zeynepezgikaya94@gmail.com</p>
+                <a href="#" className="text-blue-900 underline pointer">Kopyala</a>
                 <h2 className="title-font font-semibold text-gray-900 text-xs mt-4">TELEFON</h2>
                 <p className="leading-relaxed">+90 543 671 58 05</p>
-                <a href="#" className="text-blue-900">Telefon Numarasını Kopyala</a>
+                <a href="#" className="text-blue-900">Kopyala</a>
               </div>
             </div>
           </div>

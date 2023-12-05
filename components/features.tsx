@@ -33,20 +33,20 @@ export default function Features() {
         <div className="pt-12 md:pt-20">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          {/* <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 mb-4">Nasıl çalışıyorum?</h1>
             <p className="text-xl text-gray-600">İhtiyacınız doğrultusunda ne yapmamız gerektiğine tanışma görüşmemizden sonra beraber karar verebiliriz.</p>
-          </div>
+          </div> */}
 
           {/* Section content */}
           <div className="md:grid md:grid-cols-12 md:gap-6">
 
             {/* Content */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6" data-aos="fade-right">
-              {/* <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Powerful suite of tools</h3>
-                <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
-              </div> */}
+              <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
+                <h3 className="h3 mb-3">Nasıl bir hizmet anlayışım var ?</h3>
+                <p className="text-xl text-gray-600">Profesyonel bir danışma seansında, danışan ve danışılan arasındaki iletişim en kritik unsurdur. Size benimle bir danışma randevunuzda benden ne bekleyebileceğinizi anlatmak isterim;</p>
+              </div>
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
@@ -55,8 +55,8 @@ export default function Features() {
                   onClick={(e) => { e.preventDefault(); setTab(1); }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Çocuklarla doğru iletişim</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">Uygun Terapi Alanı</div>
+                    <div className="text-gray-600">Bazen çözüm için gerekli adımlar sakin, sessiz ve güvenli bir ortamda, bazense birden fazla danışanın olduğu ferah bir ortamda olmalıdır.<br/>Özel alanlarınız bizim için önemli.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -70,8 +70,8 @@ export default function Features() {
                   onClick={(e) => { e.preventDefault(); setTab(2); }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Sakin ve dingin yaklaşım</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">İletişime Açıklık</div>
+                    <div className="text-gray-600">İletişimin akışında gitmemiz gereken yol doğrultusunda, kolay ve sakin bir iletişim türü izleyeceğiz.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -85,8 +85,14 @@ export default function Features() {
                   onClick={(e) => { e.preventDefault(); setTab(3); }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Harika ötesi geri bildirimler</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">
+                      Empati Becerileri
+                    </div>
+                    <div className="text-gray-600">
+                      Empati, danışanın bakış
+                      açısını paylaşmak adına önemli bir araçtır. Etkili bir
+                      danışmanlık süreci sağlamamızda empati bize yardımcı olacak.
+                    </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +104,7 @@ export default function Features() {
             </div>
 
             {/* Tabs items */}
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mt-12 md:mb-0 md:order-1">
+            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mt-12 md:mt-32 md:order-1">
               <div className="transition-all">
                 <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>
                   {/* Item 1 */}
@@ -116,7 +122,7 @@ export default function Features() {
                     unmount={false}                     
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height="462" alt="Features bg" />
+                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={800} height="662" alt="Features bg" />
                       {/* <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} /> */}
                     </div>
                   </Transition>
@@ -135,7 +141,7 @@ export default function Features() {
                     unmount={false}                     
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg2} width={500} height="462" alt="Features bg" />
+                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg2} width={800} height="662" alt="Features bg" />
                       {/* <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} /> */}
                     </div>
                   </Transition>
@@ -154,7 +160,7 @@ export default function Features() {
                     unmount={false}                     
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg3} width={500} height="462" alt="Features bg" />
+                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg3} width={800} height="662" alt="Features bg" />
                       {/* <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} /> */}
                     </div>
                   </Transition>
