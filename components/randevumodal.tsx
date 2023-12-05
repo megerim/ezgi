@@ -134,7 +134,7 @@ export default function MyModal() {
                   />
                   <DatePicker
                     selected={formData.date}
-                    onChange={(date) => setFormData({ ...formData, date })}
+                    onChange={(date: Date) => setFormData({ ...formData, date })}
                     className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
                   />
                   <div className="mt-4">
