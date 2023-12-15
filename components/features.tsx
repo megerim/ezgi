@@ -24,12 +24,24 @@ export default function Features() {
 
   return (
     <section className="relative z-20">
+      <div
+          className="absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
+        >
+          <div
+            className="animate-pulse duration-1000 relative left-[calc(50%-11rem)] aspect-[1500/900] w-[40.125rem] -translate-x-1/2 rotate-[100deg] bg-gradient-to-tr from-blue-900 to-teal-700 opacity-40 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(0% 0%, 0% 100%,27.6% 76.8%,0.1% 64.9%, 27.5% 76.7%,45.2% 34.5%,47.5% 58.3%,52.4% 68.1%,60.2% 62.4%,75% 32.5%,80.7% 2%,85.5% 0.1%,100% 26.9%,100% 61.6%,80% 44.1%,80%97.7%,100% 100%, 100% 0%,0% 0%)',
+            }}
+          />
+        </div>
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
-      <div className="absolute inset-0 bg-gray-100 pointer-events-none mb-16" aria-hidden="true"></div>
+      <div className="absolute inset-0 pointer-events-none mb-16" aria-hidden="true"></div>
       <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative bg-gray-200/50 border border-black/20 rounded-md max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-20">
 
           {/* Section header */}
@@ -44,13 +56,13 @@ export default function Features() {
             {/* Content */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6" data-aos="fade-right">
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Nasıl bir hizmet anlayışım var ?</h3>
+                <h3 className="h3 mb-3">Nasıl bir hizmet anlayışım var?</h3>
                 <p className="text-xl text-gray-600">Profesyonel bir danışma seansında, danışan ve danışılan arasındaki iletişim en kritik unsurdur. Size benimle bir danışma randevunuzda benden ne bekleyebileceğinizi anlatmak isterim;</p>
               </div>
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-blue-500 shadow-md border-gray-200 hover:shadow-lg' : 'bg-blue-200 border-transparent'}`}
                   href="#0"
                   onClick={(e) => { e.preventDefault(); setTab(1); }}
                 >

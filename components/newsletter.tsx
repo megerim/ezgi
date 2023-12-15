@@ -3,12 +3,16 @@ import KelebekFoto from "@/public/images/butterfly.webp"
 
 export default function Newsletter() {
   return (
-    <section>
+    <section className="bg-third">
+
+
+
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 drop-shadow-2xl">
         <div className="pb-12 md:pb-20">
 
           {/* CTA box */}
-          <div className="relative bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-600 to-indigo-800 rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl overflow-hidden" data-aos="zoom-y-out">
+          <div className="relative bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-900 to-primary rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl overflow-hidden" data-aos="zoom-y-out">
 
             {/* Background illustration */}
             <div className="absolute right-0 bottom-0 pb-2 pr-2 pointer-events-none hidden lg:block" aria-hidden="true">
@@ -37,7 +41,7 @@ export default function Newsletter() {
             </div>
 
           </div>
-
+          
         </div>
       </div>
     </section>

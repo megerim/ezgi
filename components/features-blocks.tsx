@@ -162,7 +162,7 @@ export default function FeaturesBlocks() {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="relative flex flex-col items-center p-6 bg-white/25 backdrop-blur-xl rounded shadow-xl"
+                className="relative flex flex-col items-center p-6 bg-white/25 backdrop-blur-xl rounded border border-black/20 shadow-xl"
               >
                 {item.icon}
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">

@@ -16,7 +16,12 @@ const yuzyuzeTerapi = [
 
 export default function Testimonials() {
   return (
-    <div id="randevuBilgi" className="bg-white py-24 sm:py-32">
+    <div id="randevuBilgi" className="bg-third backdrop-blur-xl py-24 sm:py-32">
+
+
+
+
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -28,16 +33,16 @@ export default function Testimonials() {
             sonra bilgileri sizinle paylaşalım.
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-400 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+        <div className="mx-auto bg-white/40 backdrop-blur-sm mt-16 max-w-2xl rounded-3xl ring-1 ring-black/30 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
           <div className="p-8 sm:p-10 lg:flex-auto">
             <h3 className="text-2xl font-bold tracking-tight text-gray-900 text-center">
               Online Terapi
             </h3>
-            <p className="mt-6 text-base leading-7 text-gray-600">
+            <p className="mt-6 text-base leading-7 text-gray-700">
               Hemen randevu alın, terapiye başlayın.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
-              <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">
+              <h4 className="flex-none text-sm font-semibold leading-6 text-primary">
                 Ne elde edeceksiniz ?
               </h4>
               <div className="h-px flex-auto bg-gray-100" />
@@ -49,7 +54,7 @@ export default function Testimonials() {
               {onlineTerapi.map((feature) => (
                 <li key={feature} className="flex gap-x-3">
                   <CheckIcon
-                    className="h-6 w-5 flex-none text-indigo-600"
+                    className="h-6 w-5 flex-none text-primary"
                     aria-hidden="true"
                   />
                   {feature}
@@ -61,11 +66,11 @@ export default function Testimonials() {
             <h3 className="text-2xl font-bold tracking-tight text-gray-900 text-center">
               Yüzyüze Terapi
             </h3>
-            <p className="mt-6 text-base leading-7 text-gray-600">
+            <p className="mt-6 text-base leading-7 text-gray-700">
               Hemen terapi alın ve hayatınızı değiştirin.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
-              <h4 id="randevuRedirect" className="flex-none text-sm font-semibold leading-6 text-indigo-600">
+              <h4 id="randevuRedirect" className="flex-none text-sm font-semibold leading-6 text-primary">
                 Ne elde edeceksiniz ?
               </h4>
               <div className="h-px flex-auto bg-gray-100" />
@@ -77,7 +82,7 @@ export default function Testimonials() {
               {yuzyuzeTerapi.map((feature) => (
                 <li key={feature} className="flex gap-x-3">
                   <CheckIcon
-                    className="h-6 w-5 flex-none text-indigo-600"
+                    className="h-6 w-5 flex-none text-primary"
                     aria-hidden="true"
                   />
                   {feature}

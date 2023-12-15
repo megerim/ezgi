@@ -49,17 +49,17 @@ const people = [
 
 export default function Example() {
   return (
-    <section className="md:px-64 md:py-28">
-      <div className=" bg-sky-500/20 rounded-md md:px-10">
+    <section className="md:px-64 md:py-28 bg-primary">
+      <div className=" bg-white/40 backdrop-blur-md  rounded-md md:px-10">
       <div className="flex flex-col text-center w-full mb-20">
         <h1 className="text-3xl font-bold text-center mt-10">
-          <span className="bg-clip-text text-3xl md:text-4xl text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
+          <span className="bg-clip-text text-3xl md:text-5xl text-transparent bg-gradient-to-r from-blue-500 to-primary">
             Atölyeler
           </span>
         </h1>
       </div>
 
-      <ul role="list" className="divide-y divide-gray-100 antialiased">
+      <ul role="list" className="divide-y divide-primary antialiased  bg-white rounded-xl p-5">
         {people.map((person) => (
           <li key={person.email} className="flex justify-between gap-x-6 py-5">
             <div className="flex min-w-0 gap-x-4">
@@ -77,10 +77,10 @@ export default function Example() {
                 </p>
               </div>
             </div>
-            <div className="flex shrink-0 sm:flex-col sm:items-center">
+            <div className="hidden md:flex shrink-0 sm:flex-col sm:items-center">
               <a
                 href="#"
-                className="text-sm text-white p-2 rounded-full hover:text-slate-500 bg-blue-900 hover:bg-blue-600 transition duration-300"
+                className="text-sm  text-white p-2 rounded-full hover:text-fourth bg-blue-900 hover:bg-primary transition duration-300"
               >
                 {person.role}
               </a>

@@ -2,7 +2,7 @@ import Logo from './logo'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className='bg-third'>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Top area: Blocks */}
@@ -20,19 +20,19 @@ export default function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">Yazılarım</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Ebeveyn</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Ebeveyn</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Ergen</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Ergen</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Çocuk</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Çocuk</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Dikkat Eksikliği</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Dikkat Eksikliği</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Kaygı</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Kaygı</a>
               </li>
             </ul>
           </div>
@@ -42,13 +42,13 @@ export default function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">Hakkımda</h6>
             <ul className="text-sm">
             <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Otobiyografi</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Otobiyografi</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Eğitimim</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Eğitimim</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Sertifikalarım</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Sertifikalarım</a>
               </li>
             </ul>
           </div>
@@ -58,16 +58,16 @@ export default function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">İletişim</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Telefon</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Telefon</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Mail</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Mail</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Nar Psikoloji Adres</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Nar Psikoloji Adres</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">NeoLine Psikoloji Adres</a>
+                <a href="#0" className="text-gray-700 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">NeoLine Psikoloji Adres</a>
               </li>
             </ul>
           </div>
@@ -75,7 +75,7 @@ export default function Footer() {
           {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
             <h6 className="text-gray-800 font-medium mb-2">Mail Listesi</h6>
-            <p className="text-sm text-gray-600 mb-4">Mail listeme abone olarak yeni atölyelerden, yazılardan, etkinliklerden ve kampanyalardan anında haberdar olabilirsiniz.</p>
+            <p className="text-sm text-gray-700 mb-4">Mail listeme abone olarak yeni atölyelerden, yazılardan, etkinliklerden ve kampanyalardan anında haberdar olabilirsiniz.</p>
             <form>
               <div className="flex flex-wrap mb-4">
                 <div className="w-full">
@@ -106,7 +106,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#0"
-                  className="flex justify-center items-center text-gray-600 hover:text-white bg-white hover:bg-black ring-black ring-1 hover:ring-2  rounded-full shadow transition duration-300 ease-in-out"
+                  className="flex justify-center items-center text-gray-700 hover:text-white bg-white hover:bg-black ring-black ring-1 hover:ring-2  rounded-full shadow transition duration-300 ease-in-out"
                   aria-label="Twitter"
                 >
                   <svg
@@ -122,7 +122,7 @@ export default function Footer() {
               <li className="ml-4">
                 <a
                   href="whatsapp://send?phone=+905436715805"
-                  className="flex justify-center items-center text-gray-600 hover:text-green-700 bg-white hover:bg-green-500 ring-green-600 ring-1 hover:ring-2  rounded-full shadow transition duration-300 ease-in-out"
+                  className="flex justify-center items-center text-gray-700 hover:text-green-700 bg-white hover:bg-green-500 ring-green-600 ring-1 hover:ring-2  rounded-full shadow transition duration-300 ease-in-out"
                   aria-label="Whatsapp"
                 >
                   <svg
@@ -140,7 +140,7 @@ export default function Footer() {
               <li className="ml-4">
                 <a
                   href="#0"
-                  className="flex justify-center items-center text-gray-600 bg-white hover:bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 ring-fuchsia-500 ring-1 hover:ring-2 rounded-full shadow transition duration-150 ease-in-out"
+                  className="flex justify-center items-center text-gray-700 bg-white hover:bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 ring-fuchsia-500 ring-1 hover:ring-2 rounded-full shadow transition duration-150 ease-in-out"
                   aria-label="Facebook"
                 >
                   <svg
@@ -149,7 +149,7 @@ export default function Footer() {
                     x="0px"
                     y="0px"
                     viewBox="0 0 56.7 56.7"
-                    className="w-8 p-1 h-8 fill-current text-gray-600 hover:text-white"
+                    className="w-8 p-1 h-8 fill-current text-gray-700 hover:text-white"
                     enableBackground="new 0 0 56.7 56.7"
                   >
                     <g>
@@ -171,7 +171,7 @@ export default function Footer() {
             </ul>
 
           {/* Copyrights note */}
-          <div className="text-sm text-gray-600 mr-4">&copy; ZeynepEzgiKaya.com. Tüm hakları saklıdır. | <a href="https://digitalplus.net.tr/" className='hover:text-orange-600'>Digital+</a></div>
+          <div className="text-sm text-gray-700 mr-4">&copy; ZeynepEzgiKaya.com. Tüm hakları saklıdır. | <a href="https://digitalplus.net.tr/" className='hover:text-orange-600'>Digital+</a></div>
 
         </div>
 
