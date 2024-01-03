@@ -1,4 +1,3 @@
-import Kategoryfoto from '@/components/blog/kategoryfoto'
 import Tumyazilar from '@/components/blog/tumyazilar'
 import "@/app/css/blogstyle.css"
 
@@ -10,7 +9,6 @@ export const metadata = {
   export default function Yazilar() {
     return (
       <>
-      <Kategoryfoto />
       <Tumyazilar />
       </>
     )

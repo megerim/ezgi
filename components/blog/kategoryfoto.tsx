@@ -3,7 +3,6 @@ export default function Kategoryfoto() {
       
         <section className="text-gray-600 body-font">
 
-<h1 className="text-3xl font-bold text-center mt-10 pt-10"><span className="bg-clip-text text-3xl md:text-4xl text-transparent bg-gradient-to-r from-blue-500 to-teal-400"> En Yeni Yazılarım </span></h1>
 
   <div className="container px-5 py-24 mx-auto flex flex-wrap">
     <div className="lg:w-2/3 mx-auto">

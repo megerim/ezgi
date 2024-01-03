@@ -73,7 +73,8 @@ export default function Tumyazilar() {
           aria-hidden="true"
           className="h-0.5 grow rounded bg-gray-200 dark:bg-gray-700/75"
         />
-        <span className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mx-5">Bütün Yazılarım</span>
+        <span className="bg-clip-text text-2xl font-bold tracking-tight sm:text-4xl mx-5 text-transparent bg-gradient-to-r from-blue-500 to-teal-400"> Tüm Yazılarım </span>
+
         <span
           aria-hidden="true"
           className="h-0.5 grow rounded bg-gray-200 dark:bg-gray-700/75"
