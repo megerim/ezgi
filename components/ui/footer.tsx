@@ -2,20 +2,18 @@ import Logo from './logo'
 
 export default function Footer() {
   return (
-    <footer className='bg-third'>
+    <footer className='bg-primary'>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        {/* Top area: Blocks */}
-        <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200">
+        
+        {/* <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200">
 
-          {/* 1st block */}
           <div className="sm:col-span-12 lg:col-span-3">
             <div className="mb-2">
               <Logo />
             </div>
           </div>
 
-          {/* 2nd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h6 className="text-gray-800 font-medium mb-2">Yazılarım</h6>
             <ul className="text-sm">
@@ -37,7 +35,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 3rd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h6 className="text-gray-800 font-medium mb-2">Hakkımda</h6>
             <ul className="text-sm">
@@ -53,7 +50,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 4th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h6 className="text-gray-800 font-medium mb-2">İletişim</h6>
             <ul className="text-sm">
@@ -72,7 +68,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
             <h6 className="text-gray-800 font-medium mb-2">Mail Listesi</h6>
             <p className="text-sm text-gray-700 mb-4">Mail listeme abone olarak yeni atölyelerden, yazılardan, etkinliklerden ve kampanyalardan anında haberdar olabilirsiniz.</p>
@@ -88,15 +83,14 @@ export default function Footer() {
                         <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fillRule="nonzero" />
                       </svg>
                     </button>
-                  </div>
-                  {/* Success message */}
-                  {/* <p className="mt-2 text-green-600 text-sm">Thanks for subscribing!</p> */}
+                  </div>yy
+                  <p className="mt-2 text-green-600 text-sm">Thanks for subscribing!</p>
                 </div>
               </div>
             </form>
           </div>
 
-        </div>
+        </div> */}
 
         {/* Bottom area */}
         <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
@@ -171,7 +165,7 @@ export default function Footer() {
             </ul>
 
           {/* Copyrights note */}
-          <div className="text-sm text-gray-700 mr-4">&copy; ZeynepEzgiKaya.com. Tüm hakları saklıdır. | <a href="https://digitalplus.net.tr/" className='hover:text-orange-600'>Digital+</a></div>
+          <div className="text-sm text-secondary mr-4">&copy; ZeynepEzgiKaya.com. Tüm hakları saklıdır. | <a href="https://digitalplus.net.tr/" className='hover:text-orange-600'>Digital+</a></div>
 
         </div>
 

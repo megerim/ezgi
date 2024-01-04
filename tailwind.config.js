@@ -12,6 +12,7 @@ module.exports = {
         secondary: '#F2F1EB',
         third: '#AFC8AD',
         fourth: '#EEEEEE',
+        terapi: '#536B57',
         gray: {
           100: '#FBFBFB',
           200: '#EAEAEA',

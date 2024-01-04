@@ -3,18 +3,12 @@ import KelebekFoto from "@/public/images/butterfly.webp"
 
 export default function Newsletter() {
   return (
-    <section className="bg-third">
-
-
-
-
+    <section className="bg-gradient-to-b from-third to-primary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 drop-shadow-2xl">
         <div className="pb-12 md:pb-20">
 
-          {/* CTA box */}
-          <div className="relative bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-900 to-primary rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl overflow-hidden" data-aos="zoom-y-out">
+          <div className="relative bg-primary rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl overflow-hidden" data-aos="zoom-y-out">
 
-            {/* Background illustration */}
             <div className="absolute right-0 bottom-0 pb-2 pr-2 pointer-events-none hidden lg:block" aria-hidden="true">
               <Image src={KelebekFoto} alt="Kelebek fotosu" width={350} height={350}/>
             </div>
@@ -30,7 +24,7 @@ export default function Newsletter() {
                 <form className="w-full lg:w-auto">
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
                     <input type="email" className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500" placeholder="Emailinizi giriniz" aria-label="Emailinizi giriniz" />
-                    <a className="btn text-white bg-blue-600 hover:bg-blue-700 shadow" href="#0">Katıl</a>
+                    <a className="btn text-black bg-third hover:bg-primary hover:text-white shadow" href="#0">Katıl</a>
                   </div>
                   {/* Success message */}
                   {/* <p className="text-sm text-green-300 mt-3">Hoşgeldiniz !</p> */}
