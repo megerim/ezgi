@@ -1,33 +1,30 @@
-'use client'
+"use client";
 
-import { useState, useRef, useEffect } from 'react'
-import { Transition } from '@headlessui/react'
-import Image from 'next/image'
-import FeaturesBg from '@/public/images/features-bg.jpg'
-import FeaturesBg2 from '@/public/images/2features-bg.jpg'
-import FeaturesBg3 from '@/public/images/3features-bg.jpg'
-// import FeaturesElement from '@/public/images/features-element.png'
+import { useState, useRef, useEffect } from "react";
+import { Transition } from "@headlessui/react";
+import Image from "next/image";
+import FeaturesBg from "@/public/images/features-bg.jpg";
+import FeaturesBg2 from "@/public/images/2features-bg.jpg";
+import FeaturesBg3 from "@/public/images/3features-bg.jpg";
 
 export default function Features() {
-  
-  const [tab, setTab] = useState<number>(1)
+  const [tab, setTab] = useState<number>(1);
 
-  const tabs = useRef<HTMLDivElement>(null)
+  const tabs = useRef<HTMLDivElement>(null);
 
   const heightFix = () => {
-    if (tabs.current && tabs.current.parentElement) tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`
-  }
+    if (tabs.current && tabs.current.parentElement)
+      tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`;
+  };
 
   useEffect(() => {
-    heightFix()
-  }, []) 
+    heightFix();
+  }, []);
 
   return (
     <section className="relative z-20 bg-primary py-5">
-
       <div className="relative bg-gray-200/50 border border-black/20 rounded-md max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-8">
-
           {/* Section header */}
           {/* <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 mb-4">Nasıl çalışıyorum?</h1>
@@ -36,63 +33,123 @@ export default function Features() {
 
           {/* Section content */}
           <div className="md:grid md:grid-cols-12 md:gap-6">
-
             {/* Content */}
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6" data-aos="fade-right">
+            <div
+              className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
+              data-aos="fade-right"
+            >
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
                 <h3 className="h3 mb-3">Nasıl bir hizmet anlayışım var?</h3>
-                <p className="text-xl text-gray-800">Profesyonel bir danışma seansında, danışan ve danışılan arasındaki iletişim en kritik unsurdur. Size benimle bir danışma randevunuzda benden ne bekleyebileceğinizi anlatmak isterim;</p>
+                <p className="text-xl text-gray-800">
+                  Profesyonel bir danışma seansında, danışan ve danışılan
+                  arasındaki iletişim en kritik unsurdur. Size benimle bir
+                  danışma randevunuzda benden ne bekleyebileceğinizi anlatmak
+                  isterim;
+                </p>
               </div>
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-third shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
+                    tab !== 1
+                      ? "bg-third shadow-md border-gray-200 hover:shadow-lg"
+                      : "bg-gray-200 border-transparent"
+                  }`}
                   href="#0"
-                  onClick={(e) => { e.preventDefault(); setTab(1); }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTab(1);
+                  }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Uygun Terapi Alanı</div>
-                    <div className="text-gray-600">Bazen çözüm için gerekli adımlar sakin, sessiz ve güvenli bir ortamda, bazense birden fazla danışanın olduğu ferah bir ortamda olmalıdır.<br/>Özel alanlarınız bizim için önemli.</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">
+                      Uygun Terapi Alanı
+                    </div>
+                    <div className="text-gray-600">
+                      Bazen çözüm için gerekli adımlar sakin, sessiz ve güvenli
+                      bir ortamda, bazense birden fazla danışanın olduğu ferah
+                      bir ortamda olmalıdır.
+                      <br />
+                      Özel alanlarınız bizim için önemli.
+                    </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      className="w-3 h-3 fill-current"
+                      viewBox="0 0 12 12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
                     </svg>
                   </div>
                 </a>
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 2 ? 'bg-third shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
+                    tab !== 2
+                      ? "bg-third shadow-md border-gray-200 hover:shadow-lg"
+                      : "bg-gray-200 border-transparent"
+                  }`}
                   href="#0"
-                  onClick={(e) => { e.preventDefault(); setTab(2); }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTab(2);
+                  }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">İletişime Açıklık</div>
-                    <div className="text-gray-600">İletişimin akışında gitmemiz gereken yol doğrultusunda, kolay ve sakin bir iletişim türü izleyeceğiz.</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">
+                      İletişime Açıklık
+                    </div>
+                    <div className="text-gray-600">
+                      İletişimin akışında gitmemiz gereken yol doğrultusunda,
+                      kolay ve sakin bir iletişim türü izleyeceğiz.
+                    </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z" fillRule="nonzero" />
+                    <svg
+                      className="w-3 h-3 fill-current"
+                      viewBox="0 0 12 12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"
+                        fillRule="nonzero"
+                      />
                     </svg>
                   </div>
                 </a>
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 3 ? 'bg-third shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
+                    tab !== 3
+                      ? "bg-third shadow-md border-gray-200 hover:shadow-lg"
+                      : "bg-gray-200 border-transparent"
+                  }`}
                   href="#0"
-                  onClick={(e) => { e.preventDefault(); setTab(3); }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTab(3);
+                  }}
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
                       Empati Becerileri
                     </div>
                     <div className="text-gray-600">
-                      Empati, danışanın bakış
-                      açısını paylaşmak adına önemli bir araçtır. Etkili bir
-                      danışmanlık süreci sağlamamızda empati bize yardımcı olacak.
+                      Empati, danışanın bakış açısını paylaşmak adına önemli bir
+                      araçtır. Etkili bir danışmanlık süreci sağlamamızda empati
+                      bize yardımcı olacak.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.334 8.06a.5.5 0 00-.421-.237 6.023 6.023 0 01-5.905-6c0-.41.042-.82.125-1.221a.5.5 0 00-.614-.586 6 6 0 106.832 8.529.5.5 0 00-.017-.485z" fill="#191919" fillRule="nonzero" />
+                    <svg
+                      className="w-3 h-3 fill-current"
+                      viewBox="0 0 12 12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.334 8.06a.5.5 0 00-.421-.237 6.023 6.023 0 01-5.905-6c0-.41.042-.82.125-1.221a.5.5 0 00-.614-.586 6 6 0 106.832 8.529.5.5 0 00-.017-.485z"
+                        fill="#191919"
+                        fillRule="nonzero"
+                      />
                     </svg>
                   </div>
                 </a>
@@ -102,7 +159,11 @@ export default function Features() {
             {/* Tabs items */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mt-12 md:mt-32 md:order-1">
               <div className="transition-all">
-                <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>
+                <div
+                  className="relative flex flex-col text-center lg:text-right"
+                  data-aos="zoom-y-out"
+                  ref={tabs}
+                >
                   {/* Item 1 */}
                   <Transition
                     show={tab === 1}
@@ -115,11 +176,16 @@ export default function Features() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
-                    unmount={false}                     
+                    unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={800} height="662" alt="Features bg" />
-                      {/* <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} /> */}
+                      <Image
+                        className="md:max-w-none mx-auto rounded"
+                        src={FeaturesBg}
+                        width={800}
+                        height="662"
+                        alt="Features bg"
+                      />
                     </div>
                   </Transition>
                   {/* Item 2 */}
@@ -134,11 +200,16 @@ export default function Features() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
-                    unmount={false}                     
+                    unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg2} width={800} height="662" alt="Features bg" />
-                      {/* <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} /> */}
+                      <Image
+                        className="md:max-w-none mx-auto rounded"
+                        src={FeaturesBg2}
+                        width={800}
+                        height="662"
+                        alt="Features bg"
+                      />
                     </div>
                   </Transition>
                   {/* Item 3 */}
@@ -153,21 +224,24 @@ export default function Features() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
-                    unmount={false}                     
+                    unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg3} width={800} height="662" alt="Features bg" />
-                      {/* <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} /> */}
+                      <Image
+                        className="md:max-w-none mx-auto rounded"
+                        src={FeaturesBg3}
+                        width={800}
+                        height="662"
+                        alt="Features bg"
+                      />
                     </div>
                   </Transition>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
