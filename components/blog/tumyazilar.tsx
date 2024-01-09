@@ -65,7 +65,7 @@ const posts = [
 
 export default function Tumyazilar() {
   return (
-    <div className="bg-white py-24 sm:pb-32">
+    <div className="bg-secondary py-24 sm:pb-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         <h3 className="my-8 flex items-center">
@@ -73,7 +73,7 @@ export default function Tumyazilar() {
           aria-hidden="true"
           className="h-0.5 grow rounded bg-gray-200 dark:bg-gray-700/75"
         />
-        <span className="bg-clip-text text-2xl font-bold tracking-tight sm:text-4xl mx-5 text-transparent bg-gradient-to-r from-blue-500 to-teal-400"> Tüm Yazılarım </span>
+        <span className="bg-clip-text text-2xl font-bold tracking-tight sm:text-4xl mx-5 text-transparent bg-gradient-to-br from-gray-900 via-gray-700 to-primary"> Tüm Yazılarım </span>
 
         <span
           aria-hidden="true"
@@ -85,7 +85,7 @@ export default function Tumyazilar() {
           {posts.map((post) => (
             <article
               key={post.id}
-              className="flex hover:scale-105 max-w-xl flex-col items-start justify-between  border-2 border-gray-300 p-2 rounded-md drop-shadow-xl shadow-2xl hover:shadow-sky-700/50 transition duration-300 ease-in-out"
+              className="flex hover:scale-105 max-w-xl flex-col items-start justify-between  border-2 border-gray-300 p-2 rounded-md drop-shadow-xl shadow-2xl hover:shadow-primary/50 transition duration-300 ease-in-out"
             >
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={post.datetime} className="text-gray-500">

@@ -4,7 +4,7 @@ const people = [
     email: "Attentioner",
     role: "Başvuru Formu",
     imageUrl: "https://picsum.photos/200/300",
-    lastSeen: "3h ago",
+    lastSeen: "+1 Hafta önce",
     lastSeenDateTime: "2023-01-23T13:23Z",
   },
   {
@@ -50,10 +50,10 @@ const people = [
 export default function Example() {
   return (
     <section className="md:px-64 md:py-28 bg-primary">
-      <div className=" bg-white/40 backdrop-blur-md  rounded-md md:px-10">
+      <div className=" bg-white/40 backdrop-blur-md  rounded-md md:px-20 md:py-10">
       <div className="flex flex-col text-center w-full mb-20">
         <h1 className="text-3xl font-bold text-center mt-10">
-          <span className="bg-clip-text text-3xl md:text-5xl text-transparent bg-gradient-to-r from-blue-500 to-primary">
+          <span className="bg-clip-text text-3xl md:text-5xl text-transparent bg-gradient-to-br from-gray-900 via-gray-700 to-primary">
             Atölyeler
           </span>
         </h1>
@@ -80,7 +80,7 @@ export default function Example() {
             <div className="hidden md:flex shrink-0 sm:flex-col sm:items-center">
               <a
                 href="#"
-                className="text-sm  text-white p-2 rounded-full hover:text-fourth bg-blue-900 hover:bg-primary transition duration-300"
+                className="text-sm  text-fourth p-2 rounded-full hover:text-gray-700 bg-primary hover:bg-third  transition duration-300"
               >
                 {person.role}
               </a>
