@@ -1,7 +1,7 @@
 import './css/style.css'
 
 import { Inter } from 'next/font/google'
-
+import { Analytics } from '@vercel/analytics/react';
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
 
@@ -30,6 +30,8 @@ export default function RootLayout({
           <Footer />
 
         </div>
+
+        <Analytics />
       </body>
     </html>
   )

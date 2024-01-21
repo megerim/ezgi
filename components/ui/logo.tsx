@@ -7,7 +7,7 @@ export default function Logo() {
       
       <div>
       <Image 
-        src={"/images/logo.png"}
+        src={"/images/logo.webp"}
         alt="Logo"
         width={1950}
         height={1250}
