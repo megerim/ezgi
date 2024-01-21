@@ -16,7 +16,7 @@ const SubmitButton: React.FC = (props) => {
   
   return (
     <div
-      className="relative w-full bg-indigo-600 blur p-4 text-white outline-none overflow-hidden"
+      className="relative w-full bg-primary blur p-4 text-white outline-none overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

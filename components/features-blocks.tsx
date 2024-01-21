@@ -1,101 +1,27 @@
 const items = [
   {
-    title: "Oyun Terapisi",
+    title: "Yetkinlik",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: (
-      <svg
-        className="w-16 h-16 p-1 -mt-1 mb-2"
-        viewBox="0 0 64 64"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="#000"
-        width={200}
-        height={200}
-      >
-        <path
-          fill="#333"
-          d="M32 2C16.6 2 4 14.6 4 30s12.6 28 28 28 28-12.6 28-28S47.4 2 32 2zm0 50c-12.1 0-22-9.9-22-22s9.9-22 22-22 22 9.9 22 22-9.9 22-22 22z"
-        />
-      </svg>
-    ),
   },
   {
-    title: "Çocuk Danışmanlığı",
+    title: "Dürüstlük",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: (
-      <svg
-        className="w-16 h-16 p-1 -mt-1 mb-2"
-        viewBox="0 0 64 64"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-<path
-          fill="#333"
-          d="M32 2C16.6 2 4 14.6 4 30s12.6 28 28 28 28-12.6 28-28S47.4 2 32 2zm0 50c-12.1 0-22-9.9-22-22s9.9-22 22-22 22 9.9 22 22-9.9 22-22 22z"
-        />      </svg>
-    ),
   },
   {
-    title: "MOXO Dikkat Testi",
+    title: "Duyarlı ve Saygılı Olmak",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: (
-      <svg
-        className="w-16 h-16 p-1 -mt-1 mb-2"
-        viewBox="0 0 64 64"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-<path
-          fill="#333"
-          d="M32 2C16.6 2 4 14.6 4 30s12.6 28 28 28 28-12.6 28-28S47.4 2 32 2zm0 50c-12.1 0-22-9.9-22-22s9.9-22 22-22 22 9.9 22 22-9.9 22-22 22z"
-        />      </svg>
-    ),
   },
   {
-    title: "Ebeveyn Danışmanlığı",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: (
-      <svg
-        className="w-16 h-16 p-1 -mt-1 mb-2"
-        viewBox="0 0 64 64"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Example SVG path */}
-        <path
-          fill="#333"
-          d="M32 2C16.6 2 4 14.6 4 30s12.6 28 28 28 28-12.6 28-28S47.4 2 32 2zm0 50c-12.1 0-22-9.9-22-22s9.9-22 22-22 22 9.9 22 22-9.9 22-22 22z"
-        />
-      </svg>
-    ),
+    title: "Bireysel ve Kültürel Farklılıklara Duyarlılık",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
   },
   {
-    title: "Ergen Danışmanlığı",
+    title: "Toplumsal Sorumluluk",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: (
-      <svg
-        className="w-16 h-16 p-1 -mt-1 mb-2"
-        viewBox="0 0 64 64"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="#333"
-          d="M32 2C16.6 2 4 14.6 4 30s12.6 28 28 28 28-12.6 28-28S47.4 2 32 2zm0 50c-12.1 0-22-9.9-22-22s9.9-22 22-22 22 9.9 22 22-9.9 22-22 22z"
-        />
-      </svg>
-    ),
   },
   {
-    title: "Yetişkin Danışmanlığı",
+    title: "Mesleki ve Bilimsel Sorumluluk",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: (
-      <svg
-        className="w-16 h-16 p-1 -mt-1 mb-2"
-        viewBox="0 0 64 64"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="#333"
-          d="M32 2C16.6 2 4 14.6 4 30s12.6 28 28 28 28-12.6 28-28S47.4 2 32 2zm0 50c-12.1 0-22-9.9-22-22s9.9-22 22-22 22 9.9 22 22-9.9 22-22 22z"
-        />
-      </svg>
-    ),
   },
 ];
 
@@ -108,7 +34,7 @@ export default function FeaturesBlocks() {
         <div className="py-10 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-8 md:pb-18">
-            <h2 className="h2 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-secondary via-third to-secondary">Hizmetlerim</h2>
+            <h2 className="h2 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-secondary via-third to-secondary">Psikolojik danışma ilkeleri nelerdir?</h2>
             {/* <p className="text-xl text-gray-600">Size nasıl yardımcı olabilirim?</p> */}
           </div>
 
@@ -120,10 +46,10 @@ export default function FeaturesBlocks() {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="relative flex flex-col items-center p-6 bg-white/25 backdrop-blur-xl rounded border border-black/20 shadow-xl"
+                className="relative flex flex-col items-center p-6 bg-white/25 backdrop-blur-xl rounded-xl border border-black/20 shadow-xl"
               >
-                {item.icon}
-                <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
+                
+                <h4 className="text-xl font-bold leading-snug tracking-tight text-center mb-1">
                   {item.title}
                 </h4>
                 <p className="text-gray-800 text-center">{item.description}</p>

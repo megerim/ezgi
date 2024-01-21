@@ -165,7 +165,7 @@ export default function Footer() {
             </ul>
 
           {/* Copyrights note */}
-          <div className="text-sm text-secondary mr-4">&copy; ZeynepEzgiKaya.com. Tüm hakları saklıdır. | <a href="https://digitalplus.net.tr/" className='hover:text-orange-600'>Digital+</a></div>
+          <div className="text-sm text-secondary mr-4">&copy; ZeynepEzgiKaya.com. Tüm hakları saklıdır. | </div>
 
         </div>
 

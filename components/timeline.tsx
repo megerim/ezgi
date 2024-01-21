@@ -1,95 +1,113 @@
 import '@/app/css/TimelineStyles.css';
 
-const Timeline = () => {
-  return (
-    <section>
-      <div className="bg-gradient-to-r from-primary via-gray-700 to-gray-900 text-white py-8 ">
-        <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-          {/* Left Column */}
-          <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-            <p className="ml-2 text-third uppercase tracking-loose text-xs">TECRÜBELERİM</p>
-            <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Kariyerimin zaman haritası.</p>
-            <p className="text-sm md:text-base text-gray-50 mb-4">Kariyerimin zaman haritası.</p>
-            <a href="https://www.linkedin.com/in/zeynep-ezgi-kaya-300626135/" className="bg-transparent mr-auto hover:bg-third text-third hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-third hover:border-transparent">LinkedIn</a>
-          </div>
+import React from 'react';
+import Link from 'next/link';
 
-          {/* Right Column */}
-          <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
-            <div className="container mx-auto w-full h-full">
-                <div className="relative wrap overflow-hidden p-10 h-full">
-                    <div className="border-yellow-absolute h-full right-50"></div>
-                    <div className="border-yellow-absolute h-full left-50"></div>
-                    {/* Timeline item */}
-                    <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                        <div className="order-1 w-5/12"></div>
-                        <div className="order-1 w-5/12 px-1 py-4 text-right">
-                            <p className="mb-3 text-base text-third">2012-2017</p>
-                            <h4 className="mb-3 font-bold text-lg md:text-2xl">Lisans Eğitimi 💠</h4>
-                            <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                                Ege Üniversitesi<br/> Psikolojik Danışmanlık ve Rehberlik Bölümü
-                            </p>
-                        </div>
-                    </div>
-                    {/* Another timeline item */}
-                    <div className="mb-8 flex justify-between items-center w-full right-timeline">
-                        <div className="order-1 w-5/12"></div>
-                        <div className="order-1 w-5/12 px-1 py-4 text-left">
-                            <p className="mb-3 text-base text-third">2014-2016</p>
-                            <h4 className="mb-3 font-bold text-lg md:text-2xl">💠Stajlar</h4>
-                            <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                                {/* List of experiences */}
-                            </p>
-                        </div>
-                    </div>
-
-
-{/* New Timeline Item: Uzman Psikolojik Danışman */}
-<div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-    <div className="order-1 w-5/12"></div>
-    <div className="order-1 w-5/12 px-1 py-4 text-right">
-        <p className="mb-3 text-base text-third">2023-...</p>
-        <h4 className="mb-3 font-bold text-lg md:text-2xl">Uzman Psikolojik Danışman 💠</h4>
-        <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-            Neoline Psikolojik Danışmanlık Merkezi<br/>
-            <a href="#">Nar Psikolojik Danışmanlık Merkezi</a>
-        </p>
-    </div>
-</div>
-
-{/* New Timeline Item: Okul Psikolojik Danışmanı */}
-<div className="mb-8 flex justify-between items-center w-full right-timeline">
-    <div className="order-1 w-5/12"></div>
-    <div className="order-1 w-5/12 px-1 py-4">
-        <p className="mb-3 text-base text-third">2018-2023</p>
-        <h4 className="mb-3 font-bold text-lg md:text-2xl text-left">💠 Okul Psikolojik Danışmanı</h4>
-        <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-            İzmir Özel Türk Koleji<br/>
-            Uğur Okulları<br/>
-        </p>
-    </div>
-</div>
-
-{/* New Timeline Item: Additional Uzman Psikolojik Danışman */}
-<div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-    <div className="order-1 w-5/12"></div>
-    <div className="order-1 w-5/12 px-1 py-4 text-right">
-        <p className="mb-3 text-base text-third">2021 - 2022</p>
-        <h4 className="mb-3 font-bold text-lg md:text-2xl">Uzman Psikolojik Danışman 💠</h4>
-        <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-            Ege Üniversitesi Yüksek Lisans Programı
-        </p>
-    </div>
-</div>
-
-
-
-                </div>
-            </div>
-        </div>
-        </div>
-      </div>
-    </section>
-  )
+// Define a type for timeline item props
+interface TimelineItemProps {
+  date: string;
+  title: string;
+  description: React.ReactNode;
+  alignment: 'left' | 'right';
 }
 
-export default Timeline
+// Timeline item component
+const TimelineItem: React.FC<TimelineItemProps> = ({ date, title, description, alignment }) => (
+  <div className={`mb-8 flex justify-between items-center w-full ${alignment === 'left' ? 'flex-row-reverse left-timeline' : 'right-timeline'}`}>
+    <div className="order-1 w-5/12"></div>
+    <div className={`order-1 w-5/12 px-1 py-4 ${alignment === 'left' ? 'text-right' : 'text-left'}`}>
+      <p className="mb-3 text-base text-third">{date}</p>
+      <h4 className="mb-3 font-bold text-lg md:text-2xl">{title}</h4>
+      <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">{description}</p>
+    </div>
+  </div>
+);
+
+const Timeline = () => (
+  <section className="bg-gradient-to-r from-third via-primary to-gray-900 text-white py-8">
+    <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+      <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8 ">
+        <p className="ml-2 text-primary uppercase tracking-loose text-xs">TECRÜBELERİM</p>
+        <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Kariyerimin zaman haritası.</p>
+        <Link className="bg-transparent mr-auto hover:bg-third text-secondary hover:text-primary rounded shadow hover:shadow-lg py-2 px-4 border border-primary hover:border-secondary transition duration-300" href="https://www.linkedin.com/in/zeynep-ezgi-kaya-300626135/">
+          LinkedIn
+        </Link>
+      </div>
+
+      {/* Right Column */}
+      <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
+        <div className="container mx-auto w-full h-full ">
+          <div className="relative wrap overflow-hidden p-10 h-full ">
+    
+                    <div className="border-yellow-absolute h-full right-50"></div>
+                    <div className="border-yellow-absolute h-full left-50"></div>
+
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="left"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="right"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="left"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="right"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="left"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="right"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="left"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="right"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="left"
+            />
+            <TimelineItem
+              date="2012-2017"
+              title="Lisans Eğitimi 💠"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              alignment="right"
+            />
+            {/* Repeat for other timeline items */}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+export default Timeline;

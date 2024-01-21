@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Prof from "@/public/images/prof.jpg";
+import "@/app/css/TimelineStyles.css";
 
 const Aboutme = () => {
   return (
@@ -29,31 +30,95 @@ const Aboutme = () => {
             tamamladım. Daha sonra Ege Üniversitesi Psikolojik Danışmanlık ve
             Rehberlik bölümünde yüksek lisans programını "Dikkat Eksikliği ve
             Hiperaktivite Bozukluğuna Dair Derleme Çalışması" adlı bitirme
-            projesini yazarak onur derecesi ile tamamladım. Bu süreçte;{" "} </p><br/>
-            <ul className="text-left pl-5">
-              {" "}
-              <li> Çocuk ve Ergenlerde Bilişsel Davranışçı Terapi,</li>{" "}
-              <li> Oyun Terapisi, </li>{" "}
-              <li>Masal Anlatıcılığı ve Çocuk Resim Analizi, </li>{" "}
-              <li> Psikodrama, </li>
-              <li>
-                {" "}
-                Attentioner (Dikkat Eksikliği ve Hiperaktivite Bozukluğuna
-                Yönelik Terapi Programı)
-              </li>
-            </ul>{" "}<br/>
-            <p className="leading-relaxed text-left">
-            eğitimlerimi tamamladım. Mesleki hayatıma başladığım günden itibaren
-            çocuk/ergen ve ebeveyn danışmanlığı üzerinde bir çok staj programına
-            katıldım. Deneyimsel Oyun Terapisi uygulayıcısıyım. Süpervizyon
-            çalışmalarımı analitik yönelimle devam ettirmekteyim. Şuan da
-            Gaziemir Neoline Psikoloji ve Güzelbahçe Nar Psikoloji'de
-            çocuk/ergen ve ebeveyn çalışmalarımı sürdürmekteyim.
+            projesini yazarak onur derecesi ile tamamladım. Bu süreçte;{" "}
           </p>
-
           <br />
-          <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-          <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
+          <ul className="text-left pl-5">
+            {" "}
+            <li className="flex my-1 py-1">
+              <svg
+                className="h-6 w-6 mr-2 flex-none fill-green-200/75 stroke-primary stroke-2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="11" />
+                <path
+                  d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                  fill="none"
+                />
+              </svg>{" "}
+              Çocuk ve Ergenlerde Bilişsel Davranışçı Terapi,
+            </li>{" "}
+            <li className="flex my-1 py-1">
+              <svg
+                className="h-6 w-6 mr-2 flex-none fill-green-200/75 stroke-primary stroke-2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="11" />
+                <path
+                  d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                  fill="none"
+                />
+              </svg>{" "}
+              Deneyimsel Oyun Terapisi,
+            </li>{" "}
+            <li className="flex my-1 py-1">
+              <svg
+                className="h-6 w-6 mr-2 flex-none fill-green-200/75 stroke-primary stroke-2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="11" />
+                <path
+                  d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                  fill="none"
+                />
+              </svg>{" "}
+              Psikodrama İleri Aşama,
+            </li>{" "}
+            <li className="flex my-1 py-1">
+              <svg
+                className="h-6 w-6 mr-2 flex-none fill-green-200/75 stroke-primary stroke-2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="11" />
+                <path
+                  d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                  fill="none"
+                />
+              </svg>{" "}
+              Attentioner (Dikkat Eksikliği ve Hiperaktivite Bozukluğuna Yönelik
+              Terapi Programı)
+            </li>
+            <li className="flex my-1 py-1">
+              <svg
+                className="h-6 w-6 mr-2  flex-none fill-green-200/75 stroke-primary stroke-2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="11" />
+                <path
+                  d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                  fill="none"
+                />
+              </svg>
+              Masal Anlatıcılığı ve Çocuk Resim Analizi,{" "}
+            </li>{" "}
+          </ul>{" "}
+          <br />
+          <p className="leading-relaxed text-left">
+            eğitimlerimi tamamladım. Mesleki hayatıma başladığım günden itibaren
+            çocuk/ergen ve ebeveyn danışmanlığı üzerine pek çok alanda çocuklar,
+            gençler ve yetişkinlerle bir araya gelme fırsatı buldum. 2019
+            yılından bu yana süpervizyon çalışmalarımı analitik yönelimle devam
+            ettirmekteyim. Şu anda Gaziemir Neoline Psikoloji ve Güzelbahçe Nar
+            Psikoloji'de çocuk/ergen ve ebeveyn çalışmalarımı sürdürmekteyim.
+          </p>
+          <br />
+          <span className="inline-block h-1 w-24 rounded bg-primary mt-8 mb-6"></span>
+          <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
             Zeynep Ezgi Kaya
           </h2>
           <p className="text-gray-500">Uzman Psikolojik Danışman</p>

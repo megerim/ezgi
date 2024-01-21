@@ -25,34 +25,30 @@ export default function Features() {
     <section className="relative z-20 bg-primary py-5">
       <div className="relative bg-gray-200/50 border border-black/20 rounded-md max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-8">
-          {/* Section header */}
-          {/* <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Nasıl çalışıyorum?</h1>
-            <p className="text-xl text-gray-600">İhtiyacınız doğrultusunda ne yapmamız gerektiğine tanışma görüşmemizden sonra beraber karar verebiliriz.</p>
-          </div> */}
-
-          {/* Section content */}
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+            <h1 className="h2 mb-4">Nasıl bir hizmet anlayışım var?</h1>
+            <p className="text-xl text-gray-800">Çocuk, genç ve yetişkinlerle psikolojik danışma esasları
+                  çerçevesinde bir araya geldiğimiz görüşmelerde çerçevem:</p>
+          </div>
           <div className="md:grid md:grid-cols-12 md:gap-6">
             {/* Content */}
             <div
               className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
               data-aos="fade-right"
             >
-              <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
+              {/* <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
                 <h3 className="h3 mb-3">Nasıl bir hizmet anlayışım var?</h3>
                 <p className="text-xl text-gray-900">
-                  Profesyonel bir danışma seansında, danışan ve danışılan
-                  arasındaki iletişim en kritik unsurdur. Size benimle bir
-                  danışma randevunuzda benden ne bekleyebileceğinizi anlatmak
-                  isterim;
+                  Çocuk, genç ve yetişkinlerle psikolojik danışma esasları
+                  çerçevesinde bir araya geldiğimiz görüşmelerde çerçevem:
                 </p>
-              </div>
+              </div> */}
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
                     tab !== 1
-                      ? "bg-gray-200 shadow-md border-gray-200 hover:shadow-lg transition duration-600 ease-in-out"
+                      ? "bg-gray-200 hover:bg-gray-300 shadow-md border-gray-200 hover:shadow-lg transition duration-600 ease-in-out"
                       : "bg-third border-transparent"
                   }`}
                   href="#0"
@@ -62,21 +58,24 @@ export default function Features() {
                   }}
                 >
                   <div
-                  className={`${
-                    tab !== 1
-                      ? ""
-                      : "text-secondary text-xl transition duration-300"
-                  }`}
+                    className={`${
+                      tab !== 1
+                        ? ""
+                        : "text-secondary text-lg transition duration-300"
+                    }`}
                   >
-                    <div className="font-bold leading-snug tracking-tight mb-1">
-                      Uygun Terapi Alanı
+                    <div className="font-bold text-2xl leading-snug tracking-tight mb-1">
+                      Bireyi Tanıma
                     </div>
-                    <div className="text-gray-800">
-                      Bazen çözüm için gerekli adımlar sakin, sessiz ve güvenli
-                      bir ortamda, bazense birden fazla danışanın olduğu ferah
-                      bir ortamda olmalıdır.
-                      <br />
-                      Özel alanlarınız bizim için önemli.
+                    <div className="text-gray-900">
+                      Bireyi tanıma teknik ve yöntemleri zaman zaman test,
+                      ölçek, anket gibi araçlardan faydalanarak, çoğu zaman ise
+                      karşılıklı bilgi alışverişine dayalı şekilde
+                      kullanılmaktadır. Bireyle psikolojik danışma
+                      görüşmelerinin önemli yapıtaşlarından biri olan tanışma
+                      aşaması kişinin yaşadığı zor durumu anlamak ve ele almakta
+                      yol göstericidir. Bu sayede çözüm için birlikte yola
+                      çıkılır.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -99,7 +98,7 @@ export default function Features() {
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
                     tab !== 2
-                      ? "bg-gray-200 shadow-md border-gray-200 hover:shadow-lg transition duration-600 ease-in-out"
+                      ? "bg-gray-200 hover:bg-gray-300 shadow-md border-gray-200 hover:shadow-lg transition duration-600 ease-in-out"
                       : "bg-third border-transparent"
                   }`}
                   href="#0"
@@ -109,31 +108,45 @@ export default function Features() {
                   }}
                 >
                   <div
-                  className={`${
-                    tab !== 2
-                      ? ""
-                      : "text-secondary text-xl transition duration-300"
-                  }`}
+                    className={`${
+                      tab !== 2
+                        ? ""
+                        : "text-secondary text-lg transition duration-300"
+                    }`}
                   >
-                    <div className="font-bold leading-snug tracking-tight mb-1">
-                      İletişime Açıklık
+                    <div className="font-bold text-2xl leading-snug tracking-tight mb-1">
+                      İletişim, Empati ve Açıklık
                     </div>
-                    <div className="text-gray-800">
-                      İletişimin akışında gitmemiz gereken yol doğrultusunda,
-                      kolay ve sakin bir iletişim türü izleyeceğiz.
+                    <div className="text-gray-900">
+                      Psikolojik danışma süreci içerisinde ihtiyaçların analizi
+                      ve ifadesi yaşanan zorlukların aşılmasında önemli bir
+                      basamaktır. Bu basamağı ilerleyebilmek adına kurulan
+                      ilişkinin güven ve kabul esaslı olması önceliklidir.
+                      Oluşturulan, karar verilen, hedef olarak planlanan
+                      amaçlara ulaşmak için zaman zaman zor durumlar, zor
+                      duygular üzerine çalışılırken danışma sürecinin en önemli
+                      destekçisi kurulan bu ilişkidir.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M17.303 5.197A7.5 7.5 0 0 0 6.697 15.803a.75.75 0 0 1-1.061 1.061A9 9 0 1 1 21 10.5a.75.75 0 0 1-1.5 0c0-1.92-.732-3.839-2.197-5.303Zm-2.121 2.121a4.5 4.5 0 0 0-6.364 6.364.75.75 0 1 1-1.06 1.06A6 6 0 1 1 18 10.5a.75.75 0 0 1-1.5 0c0-1.153-.44-2.303-1.318-3.182Zm-3.634 1.314a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68Z" clipRule="evenodd" />
-</svg>
-
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M17.303 5.197A7.5 7.5 0 0 0 6.697 15.803a.75.75 0 0 1-1.061 1.061A9 9 0 1 1 21 10.5a.75.75 0 0 1-1.5 0c0-1.92-.732-3.839-2.197-5.303Zm-2.121 2.121a4.5 4.5 0 0 0-6.364 6.364.75.75 0 1 1-1.06 1.06A6 6 0 1 1 18 10.5a.75.75 0 0 1-1.5 0c0-1.153-.44-2.303-1.318-3.182Zm-3.634 1.314a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </a>
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
                     tab !== 3
-                      ? "bg-gray-200 shadow-md border-gray-200 hover:shadow-lg transition duration-600 ease-in-out"
+                      ? "bg-gray-200 hover:bg-gray-300 shadow-md border-gray-200 hover:shadow-lg transition duration-600 ease-in-out"
                       : "bg-third border-transparent"
                   }`}
                   href="#0"
@@ -143,26 +156,36 @@ export default function Features() {
                   }}
                 >
                   <div
-                  className={`${
-                    tab !== 3
-                      ? ""
-                      : "text-secondary text-xl transition duration-300"
-                  }`}
+                    className={`${
+                      tab !== 3
+                        ? ""
+                        : "text-secondary text-lg transition duration-300"
+                    }`}
                   >
-                    <div className="font-bold leading-snug tracking-tight mb-1">
-                      Empati Becerileri
+                    <div className="font-bold text-2xl leading-snug tracking-tight mb-1">
+                      Yetkinlik
                     </div>
-                    <div className="text-gray-800">
-                      Empati, danışanın bakış açısını paylaşmak adına önemli bir
-                      araçtır. Etkili bir danışmanlık süreci sağlamamızda empati
-                      bize yardımcı olacak.
+                    <div className="text-gray-900">
+                      Psikolojik Danışma sürecinde farklılıklara saygı ve
+                      sorumluluklar çerçevesinde yetkinlik alanında olan
+                      süreçlere müdahale edilir, destek ihtiyaçları için
+                      konsültasyon alınır. İhtiyaca yönelik planlama ve
+                      yönlendirme çalışmaları ile destek olunur.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-  <path fillRule="evenodd" d="M12 1.5a.75.75 0 0 1 .75.75V4.5a.75.75 0 0 1-1.5 0V2.25A.75.75 0 0 1 12 1.5ZM5.636 4.136a.75.75 0 0 1 1.06 0l1.592 1.591a.75.75 0 0 1-1.061 1.06l-1.591-1.59a.75.75 0 0 1 0-1.061Zm12.728 0a.75.75 0 0 1 0 1.06l-1.591 1.592a.75.75 0 0 1-1.06-1.061l1.59-1.591a.75.75 0 0 1 1.061 0Zm-6.816 4.496a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68ZM3 10.5a.75.75 0 0 1 .75-.75H6a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 10.5Zm14.25 0a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H18a.75.75 0 0 1-.75-.75Zm-8.962 3.712a.75.75 0 0 1 0 1.061l-1.591 1.591a.75.75 0 1 1-1.061-1.06l1.591-1.592a.75.75 0 0 1 1.06 0Z" clipRule="evenodd" />
-</svg>
-
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12 1.5a.75.75 0 0 1 .75.75V4.5a.75.75 0 0 1-1.5 0V2.25A.75.75 0 0 1 12 1.5ZM5.636 4.136a.75.75 0 0 1 1.06 0l1.592 1.591a.75.75 0 0 1-1.061 1.06l-1.591-1.59a.75.75 0 0 1 0-1.061Zm12.728 0a.75.75 0 0 1 0 1.06l-1.591 1.592a.75.75 0 0 1-1.06-1.061l1.59-1.591a.75.75 0 0 1 1.061 0Zm-6.816 4.496a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68ZM3 10.5a.75.75 0 0 1 .75-.75H6a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 10.5Zm14.25 0a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H18a.75.75 0 0 1-.75-.75Zm-8.962 3.712a.75.75 0 0 1 0 1.061l-1.591 1.591a.75.75 0 1 1-1.061-1.06l1.591-1.592a.75.75 0 0 1 1.06 0Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                   </div>
                 </a>
               </div>

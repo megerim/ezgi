@@ -3,6 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import CalendarIcon from "./utils/Calendar";
 
 interface FormData {
   name: string;
@@ -36,30 +37,24 @@ export default function MyModal() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //     e.preventDefault();
-
-  //     const trimmedFormData = Object.entries(formData).reduce((acc, [key, value]) => {
-  //       if (value !== '' && value !== null && value !== undefined) {
-  //         acc[key as keyof FormData] = value;
-  //       }
-  //       return acc;
-  //     }, {} as FormData);
-
-  //     console.log(trimmedFormData);
-  //     // Now you can proceed with submitting trimmedFormData
-  //   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      // Mocking an API call
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call delay
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ formData }),
+      });
+  
       setSubmissionStatus("success");
     } catch (error) {
       setSubmissionStatus("error");
     }
   };
+  
 
   return (
     <>
@@ -82,17 +77,18 @@ export default function MyModal() {
         >
           <div className="fixed inset-0 bg-black/25" />
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+            <div className="flex min-h-full items-center justify-center p-4 text-center text-secondary">
+              <Dialog.Panel className="w-full ring-2 ring-white max-w-md transform overflow-hidden rounded-2xl bg-primary p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title
                   as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900"
+                  className="text-lg text-center underline font-bold leading-6 "
                 >
                   Randevu Talep Formu
                 </Dialog.Title>
+                
                 <form onSubmit={handleSubmit} className="mt-4 space-y-4">
                   <div className="mt-2">
-                    <span className="font-semibold">Randevu Türü:</span>
+                    <span className="font-semibold">Randevu Türü:</span><br />
                     <label className="inline-flex items-center ml-4">
                       <input
                         type="radio"
@@ -101,6 +97,7 @@ export default function MyModal() {
                         checked={formData.meetingType === "online"}
                         onChange={handleChange}
                         className="form-radio"
+                        required
                       />
                       <span className="ml-2">Online</span>
                     </label>
@@ -112,6 +109,7 @@ export default function MyModal() {
                         checked={formData.meetingType === "offline"}
                         onChange={handleChange}
                         className="form-radio"
+                        required
                       />
                       <span className="ml-2">Yüz Yüze</span>
                     </label>
@@ -122,7 +120,8 @@ export default function MyModal() {
                     placeholder="Adınız"
                     value={formData.name}
                     onChange={handleChange}
-                    className="block w-full rounded-md border-gray-300 shadow-sm"
+                    className="block w-full rounded-md border-gray-300 shadow-sm text-gray-800"
+                    required
                   />
                   <input
                     type="text"
@@ -130,20 +129,28 @@ export default function MyModal() {
                     placeholder="Soyadınız"
                     value={formData.surname}
                     onChange={handleChange}
-                    className="block w-full rounded-md border-gray-300 shadow-sm"
+                    className="block w-full rounded-md border-gray-300 shadow-sm text-gray-800"
+                    required
                   />
+                  <br />
+                  <div className="flex flex-row items-center justify-center gap-5">
+                  <CalendarIcon />
                   <DatePicker
                     selected={formData.date}
                     onChange={(date: Date) => setFormData({ ...formData, date })}
-                    className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
+                    className="block w-full rounded-md border-gray-300 shadow-sm text-gray-800"
                   />
+                  
+                  </div>
+                  <p className="text-xs text-center">Zaman seçmek zorunda değilsiniz, bunu birlikte belirleyebiliriz.</p>
                   <div className="mt-4">
-                    <p className="font-semibold text-gray-700">
+                    <p className="font-semibold">
+                    <br />
                       Sizinle nasıl iletişime geçelim?
                     </p>
                   </div>
 
-                  <div className="mt-2 text-center">
+                  <div className="mt-2 flex">
                     <label className="inline-flex items-center">
                       <input
                         type="radio"
@@ -152,6 +159,7 @@ export default function MyModal() {
                         checked={formData.contactPreference === "mail"}
                         onChange={handleChange}
                         className="form-radio"
+                        required
                       />
                       <span className="ml-2">Mail</span>
                     </label>
@@ -163,9 +171,12 @@ export default function MyModal() {
                         checked={formData.contactPreference === "message"}
                         onChange={handleChange}
                         className="form-radio"
+                        required
                       />
                       <span className="ml-2">Mesaj</span>
+                      
                     </label>
+                    <br />
                     <label className="inline-flex items-center ml-6">
                       <input
                         type="radio"
@@ -174,39 +185,41 @@ export default function MyModal() {
                         checked={formData.contactPreference === "call"}
                         onChange={handleChange}
                         className="form-radio"
+                        required
                       />
                       <span className="ml-2">Arama</span>
                     </label>
                   </div>
 
-                  {/* Input for email */}
-                  {formData.contactPreference === "mail" && (
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email Adresiniz"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
-                    />
-                  )}
+                  {/* Conditionally render email input */}
+  {formData.contactPreference === "mail" && (
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Adresiniz"
+      value={formData.email}
+      onChange={handleChange}
+      required={formData.contactPreference === "mail"}
+      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
+    />
+  )}
 
-                  {/* Input for phone number (both for 'Get Messaged' and 'Get Called') */}
-                  {(formData.contactPreference === "message" ||
-                    formData.contactPreference === "call") && (
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="Telefon Numaranız"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
-                    />
-                  )}
+  {/* Conditionally render phone number input */}
+  {(formData.contactPreference === "message" || formData.contactPreference === "call") && (
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Telefon Numaranız"
+      value={formData.phone}
+      onChange={handleChange}
+      required={formData.contactPreference === "message" || formData.contactPreference === "call"}
+      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
+    />
+  )}
 
                   <button
                     type="submit"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="flex float-right rounded-md border border-transparent bg-third px-4 py-2 text-sm font-medium text-gray-800 shadow-sm hover:bg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   >
                     Gönder
                   </button>
@@ -218,7 +231,7 @@ export default function MyModal() {
       </Transition>
 
       {submissionStatus === "success" && (
-        <div className="rounded-md bg-green-100 p-4">
+        <div className="rounded-md bg-green-100 p-4 mx-36">
           <div className="flex">
             <div className="flex-shrink-0">
               {/* Success Icon */}
@@ -243,14 +256,6 @@ export default function MyModal() {
                   Randevu talebiniz başarıyla oluşturuldu. En yakın zamanda
                   tarafınıza belirttiğiniz yöntem ile ulaşım sağlayacağız.
                 </p>
-              </div>
-              <div className="mt-4">
-                <a
-                  href="#"
-                  className="text-sm font-medium text-green-900 hover:underline"
-                >
-                  Ana Sayfaya Dön
-                </a>
               </div>
             </div>
           </div>
