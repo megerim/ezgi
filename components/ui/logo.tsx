@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image'
-import LogoFoto from '/images/logo.png'
+import LogoFoto from '@/public/images/logo.png'
 
 export default function Logo() {
   return (
@@ -12,7 +12,7 @@ export default function Logo() {
         alt="Logo"
         width={1950}
         height={1250}
-        className="w-64 h-24"
+        className="w-48 h-16"
       />
       </div>
     </Link>

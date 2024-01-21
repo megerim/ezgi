@@ -20,7 +20,7 @@ export default function Hero() {
               {/* <p className="text-xl text-secondary mb-8" data-aos="zoom-y-out" data-aos-delay="150">Eğitim ve sertifika bilgilerimi görebileceğiniz, yazılarımı okuyabileceğiniz, randevu talep edebileceğiniz websiteme hoşgeldiniz.</p> */}
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <Link href="/about" className="btn text-white bg-primary hover:bg-third hover:text-black duration-500 w-full mb-4 sm:w-auto sm:mb-0">Hakkımda</Link>
+                  <Link href="/about" className="btn text-white bg-primary hover:bg-third hover:text-black duration-500 w-full mb-4 hover:ring-2 hover:ring-white sm:w-auto sm:mb-0">Hakkımda</Link>
                 </div>
                 <div>
                   <a className="btn text-white bg-gray-900 hover:bg-gray-700 duration-500 w-full sm:w-auto sm:ml-4" href="#randevuBilgi">Randevu Bilgisi</a>
