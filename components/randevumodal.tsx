@@ -206,7 +206,7 @@ export default function MyModal() {
                       value={formData.email}
                       onChange={handleChange}
                       required={formData.contactPreference === "mail"}
-                      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
+                      className="block w-full mt-2 rounded-md text-gray-800 border-gray-300 shadow-sm"
                     />
                   )}
 
@@ -222,7 +222,7 @@ export default function MyModal() {
                         formData.contactPreference === "message" ||
                         formData.contactPreference === "call"
                       }
-                      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
+                      className="block w-full mt-2 rounded-md text-gray-800 border-gray-300 shadow-sm"
                     />
                   )}
 

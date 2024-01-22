@@ -4,7 +4,6 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     const { formData } = req.body;
 
-    // Ensure environment variables are set
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
       return res.status(500).json({ success: false, message: 'Server error' });
     }
@@ -30,9 +29,11 @@ export default async (req, res) => {
     try {
       const result = await transporter.sendMail(mailOptions);
       res.status(200).json({ success: true, message: 'Email sent', result });
-    } catch (error) {
+   } catch (error) {
+      console.error("Error sending email:", error);
       res.status(500).json({ success: false, message: 'Email not sent', error: error.message });
-    }
+   }
+   
   } else {
     res.setHeader('Allow', ['POST']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
