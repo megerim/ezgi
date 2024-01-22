@@ -37,11 +37,10 @@ export default function MyModal() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await fetch('/api/send-email', {
+      const response = await fetch('/api/sendEmail', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +48,11 @@ export default function MyModal() {
         body: JSON.stringify({ formData }),
       });
   
-      setSubmissionStatus("success");
+      if (response.ok) {
+        setSubmissionStatus("success");
+      } else {
+        throw new Error('Server responded with an error');
+      }
     } catch (error) {
       setSubmissionStatus("error");
     }
@@ -66,7 +69,6 @@ export default function MyModal() {
         >
           Randevu Talep Et
         </button>
-        
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -85,10 +87,11 @@ export default function MyModal() {
                 >
                   Randevu Talep Formu
                 </Dialog.Title>
-                
+
                 <form onSubmit={handleSubmit} className="mt-4 space-y-4">
                   <div className="mt-2">
-                    <span className="font-semibold">Randevu Türü:</span><br />
+                    <span className="font-semibold">Randevu Türü:</span>
+                    <br />
                     <label className="inline-flex items-center ml-4">
                       <input
                         type="radio"
@@ -134,18 +137,22 @@ export default function MyModal() {
                   />
                   <br />
                   <div className="flex flex-row items-center justify-center gap-5">
-                  <CalendarIcon />
-                  <DatePicker
-                    selected={formData.date}
-                    onChange={(date: Date) => setFormData({ ...formData, date })}
-                    className="block w-full rounded-md border-gray-300 shadow-sm text-gray-800"
-                  />
-                  
+                    <CalendarIcon />
+                    <DatePicker
+                      selected={formData.date}
+                      onChange={(date: Date) =>
+                        setFormData({ ...formData, date })
+                      }
+                      className="block w-full rounded-md border-gray-300 shadow-sm text-gray-800"
+                    />
                   </div>
-                  <p className="text-xs text-center">Zaman seçmek zorunda değilsiniz, bunu birlikte belirleyebiliriz.</p>
+                  <p className="text-xs text-center">
+                    Zaman seçmek zorunda değilsiniz, bunu birlikte
+                    belirleyebiliriz.
+                  </p>
                   <div className="mt-4">
                     <p className="font-semibold">
-                    <br />
+                      <br />
                       Sizinle nasıl iletişime geçelim?
                     </p>
                   </div>
@@ -174,7 +181,6 @@ export default function MyModal() {
                         required
                       />
                       <span className="ml-2">Mesaj</span>
-                      
                     </label>
                     <br />
                     <label className="inline-flex items-center ml-6">
@@ -192,30 +198,33 @@ export default function MyModal() {
                   </div>
 
                   {/* Conditionally render email input */}
-  {formData.contactPreference === "mail" && (
-    <input
-      type="email"
-      name="email"
-      placeholder="Email Adresiniz"
-      value={formData.email}
-      onChange={handleChange}
-      required={formData.contactPreference === "mail"}
-      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
-    />
-  )}
+                  {formData.contactPreference === "mail" && (
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Adresiniz"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required={formData.contactPreference === "mail"}
+                      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
+                    />
+                  )}
 
-  {/* Conditionally render phone number input */}
-  {(formData.contactPreference === "message" || formData.contactPreference === "call") && (
-    <input
-      type="tel"
-      name="phone"
-      placeholder="Telefon Numaranız"
-      value={formData.phone}
-      onChange={handleChange}
-      required={formData.contactPreference === "message" || formData.contactPreference === "call"}
-      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
-    />
-  )}
+                  {(formData.contactPreference === "message" ||
+                    formData.contactPreference === "call") && (
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Telefon Numaranız"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required={
+                        formData.contactPreference === "message" ||
+                        formData.contactPreference === "call"
+                      }
+                      className="block w-full mt-2 rounded-md border-gray-300 shadow-sm"
+                    />
+                  )}
 
                   <button
                     type="submit"
