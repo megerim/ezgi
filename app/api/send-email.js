@@ -6,7 +6,7 @@ export default async (req, res) => {
 
     // Ensure environment variables are set
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
-      return res.status(500).json({ success: false, message: 'Server configuration error' });
+      return res.status(500).json({ success: false, message: 'Server error' });
     }
 
     // Configure Nodemailer transporter
@@ -21,8 +21,8 @@ export default async (req, res) => {
     // Email options
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'your-receiving-email@example.com', // Your email where you want to receive messages
-      subject: 'New Form Submission',
+      to: 'merimgokhan@gmail.com',
+      subject: 'Yeni Randevu Talebi',
       text: JSON.stringify(formData, null, 2),
     };
 

@@ -231,7 +231,7 @@ export default function MyModal() {
       </Transition>
 
       {submissionStatus === "success" && (
-        <div className="rounded-md bg-green-100 p-4 mx-36">
+        <div className="rounded-md bg-green-100 p-4 md:mx-36">
           <div className="flex">
             <div className="flex-shrink-0">
               {/* Success Icon */}
