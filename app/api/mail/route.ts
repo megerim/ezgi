@@ -3,26 +3,19 @@ import nodemailer from 'nodemailer';
 
 interface FormData {
   // Define the structure of your form data here
-  // For example:
-  // name: string;
-  // email: string;
-  // message: string;
-  // ...
 }
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
-  // Check if the method is POST
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ success: false, message: 'Only POST requests are allowed' });
+    res.status(405).json({ success: false, message: 'Only POST requests are allowed' });
+    return;
   }
 
   const { formData } = req.body as { formData: FormData };
 
-  // Validate formData here (if necessary)
-  // ...
-
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
-    return res.status(500).json({ success: false, message: 'Email user or password not configured' });
+    res.status(500).json({ success: false, message: 'Email user or password not configured' });
+    return;
   }
 
   const transporter = nodemailer.createTransport({
@@ -36,7 +29,7 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'recipient@example.com', // Replace with your recipient
+    to: 'merimgokhan@gmail.com', 
     subject: 'Yeni Randevu Talebi',
     text: JSON.stringify(formData, null, 2),
   };
@@ -48,4 +41,4 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error sending email:", error);
     res.status(500).json({ success: false, message: 'Failed to send email', errorDetails: error.message });
   }
-};
+}
