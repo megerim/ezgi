@@ -40,7 +40,7 @@ export default function MyModal() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/sendEmail', { 
+      const response = await fetch('/api/mail', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
