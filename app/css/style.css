@@ -16,12 +16,20 @@
     }
 }
 
-.bgimage{
+.bgimage {
     background-image: url(/images/bgimage.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: auto; /* Changed from 100vh to auto */
+    min-height: 100vh; /* Ensures it covers the viewport but can expand */
     width: 100%;
     position: relative;
+}
+
+@media (max-width: 640px) { /* Example breakpoint for mobile devices */
+    .bgimage {
+        /* Adjustments for mobile */
+        min-height: auto;
+    }
 }

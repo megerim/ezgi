@@ -4,21 +4,15 @@ import Randevumodal from "@/components/randevumodal";
 const onlineTerapi = [
   "Esnek randevu saatleri",
   "Konfor alanınızda terapi",
-  "Zoom altyapısı ile kaliteli görüşme",
 ];
 const yuzyuzeTerapi = [
   "Samimiyet ve güven ortamı",
-  "Kolay ulaşım",
   "Resmi danışma merkezi",
 ];
 
 export default function Testimonials() {
   return (
     <div id="randevuBilgi" className="bg-third backdrop-blur-xl py-8 sm:py-12">
-
-
-
-
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">

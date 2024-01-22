@@ -1,6 +1,8 @@
+import Link from 'next/link'
+
 const Contact = () => {
     return (
-        <section className="text-gray-600 body-font relative py-16 bgimage">
+        <section className="text-gray-600 body-font relative py-16">
         <div className="container px-5 lg:py-12 mx-auto flex sm:flex-nowrap flex-wrap">
           <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <iframe width="100%" height="100%" className="absolute inset-0" title="map"  src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)' }}></iframe>
@@ -8,18 +10,20 @@ const Contact = () => {
               <div className="lg:w-1/3 px-6">
                 <h2 className="title-font font-semibold text-gray-900 text-xs">Neoline Psikoloji</h2>
                 <p className="mt-1">AtıfBey Mah. 71 sk. AMASSİZMİR, 35410 Gaziemir/İzmir</p>
+                <Link href="https://maps.app.goo.gl/n337rVuDYED1dA2z6" className="btn text-white text-sm bg-primary mt-2 hover:bg-third hover:text-black duration-500 w-full hover:ring-2 hover:ring-white sm:w-auto sm:mb-0">Google Maps</Link>
+
               </div>
               <div className="lg:w-1/3 px-6">
                 <h2 className="title-font font-semibold text-gray-900 text-xs">Nar Psikoloji</h2>
                 <p className="mt-1">Yelki Mah, İnönü Cad. Yelken Sitesi, C Blok , Daire 10 Güzelbahçe/İzmir</p>
+                <Link href="https://maps.app.goo.gl/GjExcnwSFmTPVkY46" className="btn text-white bg-primary text-sm mt-2 hover:bg-third hover:text-black duration-500 w-full hover:ring-2 hover:ring-white sm:w-auto sm:mb-0">Google Maps</Link>
+
               </div>
               <div className="lg:w-1/3 px-6 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-gray-900 text-xs">EMAIL</h2>
-                <p className="text-indigo-500 leading-relaxed underline pointer">zeynepezgikaya94@gmail.com</p>
-                <a href="#" className="text-blue-900 underline pointer">Kopyala</a>
+                <Link href='mailto:zeynepezgikaya94@gmail.com' className="text-indigo-500 leading-relaxed underline pointer hover:text-indigo-700">zeynepezgikaya94@gmail.com</Link>
                 <h2 className="title-font font-semibold text-gray-900 text-xs mt-4">TELEFON</h2>
-                <p className="leading-relaxed">+90 543 671 58 05</p>
-                <a href="#" className="text-blue-900">Kopyala</a>
+                <Link href={"tel:+905436715805"} className="text-indigo-500 leading-relaxed underline pointer hover:text-indigo-700">+90 543 671 58 05</Link>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ export default function Logo() {
         alt="Logo"
         width={1950}
         height={1250}
-        className="w-48 h-16"
+        className="w-40 h-16"
       />
       </div>
     </Link>

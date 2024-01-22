@@ -1,27 +1,27 @@
 const items = [
   {
     title: "Yetkinlik",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Danışmanlar, etkili yardım için gerekli bilgi ve becerilere sahip olmalıdır.",
   },
   {
     title: "Dürüstlük",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Danışmanlar, danışanlarına karşı samimi ve gerçekçi olmalıdır.",
   },
   {
     title: "Duyarlı ve Saygılı Olmak",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Danışmanlar, danışanların bakış açılarını anlamak ve bağlantı kurmak için empati göstermelidir.",
   },
   {
     title: "Bireysel ve Kültürel Farklılıklara Duyarlılık",
-    description: "Lorem ipsum dolor sit amet, consectetur.",
+    description: "Danışmanlar, danışanların bireysel ve kültürel arka planlarına saygılı olmalıdır.",
   },
   {
     title: "Toplumsal Sorumluluk",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Danışmanlar, toplumsal etkileri dikkate alarak sorumluluklarını yerine getirmelidir.",
   },
   {
     title: "Mesleki ve Bilimsel Sorumluluk",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Danışmanlar, etik ve yasal standartlara uyarak mesleki sınırlarını korumalıdır.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function FeaturesBlocks() {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="relative flex flex-col items-center p-6 bg-white/25 backdrop-blur-xl rounded-xl border border-black/20 shadow-xl"
+                className="relative flex flex-col items-center h-40 justify-center p-6 bg-white/25 backdrop-blur-xl rounded-xl border border-black/20 shadow-xl"
               >
                 
                 <h4 className="text-xl font-bold leading-snug tracking-tight text-center mb-1">

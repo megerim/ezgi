@@ -4,7 +4,7 @@ export default function ContactLayout({
     children: React.ReactNode
   }) {  
     return (
-      <main className="grow">
+      <main className="grow bgimage">
   
         {children}
   

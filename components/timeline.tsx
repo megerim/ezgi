@@ -43,15 +43,27 @@ const Timeline = () => (
                     <div className="border-yellow-absolute h-full left-50"></div>
 
             <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              date="2012-2014"
+              title="Gönüllü Projeleri 💠"
+              description={<><span>Türk Eğitim Gönüllüleri Vakfı </span></>}
+              alignment="left"
+            />
+            <TimelineItem
+              date="2014-2015"
+              title="💠Gönüllü Çalışma Grubu"
+              description={<><span>Abla-Ağabey-Kardeş Projesi</span></>}
+              alignment="right"
+            />
+            <TimelineItem
+              date="2016-2017"
+              title="Rehabilitasyon Merkezi💠"
+              description={<><span>Kadın Danışma Merkezi</span></>}
               alignment="left"
             />
             <TimelineItem
               date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              title="💠Okul Çalışmaları"
+              description={<><span>İlkokul, Ortaokul ve Lise Kademe Çalışmaları</span></>}
               alignment="right"
             />
             <TimelineItem
@@ -61,48 +73,35 @@ const Timeline = () => (
               alignment="left"
             />
             <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              date="2017-2019"
+              title="💠Okul Psikolojik Danışmanı"
+              description={<><span>İzmir Özel Türk Koleji</span></>}
               alignment="right"
             />
             <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
+              date="2019-2023"
+              title="Okul Psikolojik Danışman💠"
+              description={<><span>Narlıdere Uğur Okulları </span></>}
+              alignment="left"
+            />
+            <TimelineItem
+              date="2021-2022"
+              title="💠Yüksek Lisans Eğitimi"
+              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik</span></>}
+              alignment="right"
+            />
+            <TimelineItem
+              date="2022-..."
+              title="Uzman Psikolojik Danışman💠"
               description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
               alignment="left"
             />
             <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
+              date="2023-..."
+              title="Uzman Psikolojik Danışman💠"
+              description={<><span>Nar Psikoloji</span></>}
               alignment="right"
             />
-            <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
-              alignment="left"
-            />
-            <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
-              alignment="right"
-            />
-            <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
-              alignment="left"
-            />
-            <TimelineItem
-              date="2012-2017"
-              title="Lisans Eğitimi 💠"
-              description={<><span>Ege Üniversitesi</span><br/><span>Psikolojik Danışmanlık ve Rehberlik Bölümü</span></>}
-              alignment="right"
-            />
-            {/* Repeat for other timeline items */}
           </div>
         </div>
       </div>
