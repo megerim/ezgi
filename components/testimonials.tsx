@@ -5,13 +5,11 @@ const onlineTerapi = [
   "Esnek randevu saatleri",
   "Konfor alanınızda terapi",
   "Zoom altyapısı ile kaliteli görüşme",
-  "Kredi kartı ile ödeme kolaylığı",
 ];
 const yuzyuzeTerapi = [
   "Samimiyet ve güven ortamı",
   "Kolay ulaşım",
   "Resmi danışma merkezi",
-  "Çay kahve",
 ];
 
 export default function Testimonials() {
