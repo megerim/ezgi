@@ -296,7 +296,7 @@ export default function MyModal() {
                 <p>
                   Randevu talep formunuz gönderilirken bir hata oluştu. Hatanın
                   devam etmesi durumunda lütfen bizimle başka bir yöntem ile
-                  iletişime geççin.
+                  iletişime geçin.
                 </p>
               </div>
             </div>
