@@ -4,6 +4,7 @@ import { Fragment, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CalendarIcon from "./utils/Calendar";
+import { tr } from 'date-fns/locale';
 
 interface FormData {
   name: string;
@@ -21,12 +22,12 @@ export default function MyModal() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     surname: "",
-    contactPreference: "",
+    contactPreference: "call",
     email: "",
     message: "",
     phone: "",
     date: new Date(),
-    meetingType: "",
+    meetingType: "online",
   });
 
   const [submissionStatus, setSubmissionStatus] = useState<
@@ -40,24 +41,23 @@ export default function MyModal() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/mail', { 
-        method: 'POST',
+      const response = await fetch("/api/mail", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ formData }),
       });
-  
+
       if (response.ok) {
         setSubmissionStatus("success");
       } else {
-        throw new Error('Server responded with an error');
+        throw new Error("Server responded with an error");
       }
     } catch (error) {
       setSubmissionStatus("error");
     }
   };
-  
 
   return (
     <>
@@ -135,7 +135,6 @@ export default function MyModal() {
                     className="block w-full rounded-md border-gray-300 shadow-sm text-gray-800"
                     required
                   />
-                  <br />
                   <div className="flex flex-row items-center justify-center gap-5">
                     <CalendarIcon />
                     <DatePicker
@@ -144,10 +143,12 @@ export default function MyModal() {
                         setFormData({ ...formData, date })
                       }
                       className="block w-full rounded-md border-gray-300 shadow-sm text-gray-800"
+                      dateFormat="dd/MM/yyyy"
+                      locale={tr}
                     />
                   </div>
                   <p className="text-xs text-center">
-                    Zaman seçmek zorunda değilsiniz, bunu birlikte
+                    Tarih seçmek zorunda değilsiniz, bunu birlikte
                     belirleyebiliriz.
                   </p>
                   <div className="mt-4">
