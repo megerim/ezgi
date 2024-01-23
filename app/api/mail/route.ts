@@ -2,15 +2,18 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 interface FormData {
-  // Define the structure of your form data here
+  name: string;
+  surname: string;
+  contactPreference: string;
   email: string;
-  subject: string;
   message: string;
+  phone: string;
+  date: Date;
+  meetingType: string;
 }
 
 export async function POST(req: NextRequest) {
   const { formData } = await req.json() as { formData: FormData };
-
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
     return NextResponse.json(
       { success: false, message: 'Email user or password not configured' },
@@ -29,7 +32,7 @@ export async function POST(req: NextRequest) {
   const mailOptions = {
     from: formData.email,
     to: "merimgokhan@gmail.com", // Replace this with the appropriate recipient email
-    subject: formData.subject,
+    subject: "Yeni Randevu Talebi",
     text: formData.message,
     html: `<div>${formData.message}</div>`,
   };
