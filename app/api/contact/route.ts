@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
 
   const mailOptions = {
     from: formData.email,
-    to: "merimgokhan@gmail.com",
+    to: "pdzeynepezgikaya@gmail.com",
     subject: "İletişim Bildirimi",
     text: `İsim: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\nMessage: ${formData.message}`,
     html: `<div>

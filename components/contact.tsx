@@ -95,10 +95,10 @@ export default function Contact() {
                 EMAIL
               </h2>
               <Link
-                href="mailto:zeynepezgikaya94@gmail.com"
+                href="mailto:pdzeynepezgikaya@gmail.com"
                 className="text-indigo-500 leading-relaxed underline pointer hover:text-indigo-700"
               >
-                zeynepezgikaya94@gmail.com
+                pdzeynepezgikaya@gmail.com
               </Link>
               <h2 className="title-font font-semibold text-gray-900 text-xs mt-4">
                 TELEFON

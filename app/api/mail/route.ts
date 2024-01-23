@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
 
   const mailOptions = {
     from: formData.email,
-    to: "merimgokhan@gmail.com", // Replace with the appropriate recipient email
+    to: "pdzeynepezgikaya@gmail.com",
     subject: "Yeni Randevu Talebi",
     text: `İsim: ${formData.name}\nSoyisim: ${formData.surname}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\nİletişim Yöntemi: ${formData.contactPreference}\nTarih: ${formData.date}\nRandevu Türü: ${formData.meetingType}\nMessage: ${formData.message}`,
     html: `<div>
