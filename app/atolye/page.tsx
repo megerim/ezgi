@@ -1,5 +1,5 @@
 import Atolyeler from '@/components/atolye/atolyeler'
-import App from '@/components/utils/sekillibtn'
+import Color from '@/components/utils/sekillibtn'
 
 
 export const metadata = {
@@ -11,7 +11,7 @@ export const metadata = {
     return (
       <>
       <Atolyeler />
-      <App />
+      <Color />
       </>
     )
   }

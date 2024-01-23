@@ -49,7 +49,7 @@ const people = [
 
 export default function Example() {
   return (
-    <section className="md:px-64 md:py-28 bg-primary">
+    <section className="md:px-64 md:py-28 bgimage">
       <div className=" bg-white/40 backdrop-blur-md  rounded-md md:px-20 md:py-10">
       <div className="flex flex-col text-center w-full mb-20">
         <h1 className="text-3xl font-bold text-center mt-10">
