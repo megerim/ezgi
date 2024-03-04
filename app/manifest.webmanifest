@@ -1,0 +1,26 @@
+{
+    "name": "Zeynep Ezgi Kaya",
+    "short_name": "Z Ezgi Kaya",
+    "description": "Uzman Psikolojik Danışman",
+    "start_url": "https://www.zeynepezgikaya.com/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#536B57",
+    "icons": [
+      {
+        "src": "/images/logo.webp",
+        "type": "image/webp",
+        "sizes": "160x65"
+      }
+    ],
+    "scope": "/",
+    "orientation": "portrait",
+    "lang": "tr-TR",
+    "dir": "ltr",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "screenshots": [],
+    "shortcuts": [],
+    "categories": []
+  }
+  

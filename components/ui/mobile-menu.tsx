@@ -95,7 +95,7 @@ export default function MobileMenu() {
             </li>
           </ul>      
 
-       <div className="mt-auto flex justify-center h-96 pt-24">
+       <div className="mt-auto flex justify-center h-96 pt-20">
        <ul className="flex mb-4 md:hidden mt-auto">
               <li>
                 <a

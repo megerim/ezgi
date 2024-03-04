@@ -39,8 +39,9 @@ export default function Hero() {
           <Image
             src={VideoThumb}
             alt="Bg image"
-            width={2188}
-            height={1375} 
+            width={1550}
+            height={1000} 
+            priority={true}
             />
       </div>
     </section>

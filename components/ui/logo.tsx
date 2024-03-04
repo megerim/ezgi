@@ -9,8 +9,8 @@ export default function Logo() {
       <Image 
         src={"/images/logo.webp"}
         alt="Logo"
-        width={1950}
-        height={1250}
+        width={835}
+        height={295}
         className="w-40 h-16"
       />
       </div>
