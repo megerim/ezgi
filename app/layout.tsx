@@ -5,12 +5,8 @@ import { Analytics } from '@vercel/analytics/react';
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
 import type { Metadata } from 'next'
-import Hotjar from '@hotjar/browser';
 
-const siteId = 3890848;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
+import { GoogleAnalytics, GoogleTagManager  } from '@next/third-parties/google'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -86,6 +82,9 @@ export default function RootLayout({
 
         <Analytics />
       </body>
+      <GoogleAnalytics gaId="G-XV4HRT4ZN0" />
+      
+      <GoogleTagManager gtmId="GTM-PXTM6M75" />
     </html>
   )
 }
