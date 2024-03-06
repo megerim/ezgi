@@ -4,7 +4,7 @@ import "@/app/css/TimelineStyles.css";
 
 const Aboutme = () => {
   return (
-    <section className="relative pt-12 text-gray-600 md:p-24 body-font">
+    <section className="relative pt-12 text-gray-900 md:p-24 body-font">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center px-5 py-8">
         <div className="mb-5 mr-5 lg:mb-0 rounded-3xl w-48 h-72 lg:w-1/3 lg:h-auto object-cover object-center">
           <Image
@@ -106,22 +106,36 @@ const Aboutme = () => {
               </svg>
               Masal Anlatıcılığı ve Çocuk Resim Analizi,{" "}
             </li>{" "}
+            <li className="flex my-1 py-1">
+              <svg
+                className="h-6 w-6 mr-2  flex-none fill-green-200/75 stroke-primary stroke-2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="11" />
+                <path
+                  d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                  fill="none"
+                />
+              </svg>
+              MOXO Dikkat Testi,{" "}
+            </li>{" "}
           </ul>{" "}
           <br />
           <p className="leading-relaxed text-left">
             eğitimlerimi tamamladım. Mesleki hayatıma başladığım günden itibaren
-            çocuk/ergen ve ebeveyn danışmanlığı üzerine pek çok alanda çocuklar,
+            çocuk, ergen, yetişkin ve ebeveyn danışmanlığı üzerine pek çok alanda çocuklar,
             gençler ve yetişkinlerle bir araya gelme fırsatı buldum. 2019
             yılından bu yana süpervizyon çalışmalarımı analitik yönelimle devam
             ettirmekteyim. Şu anda Gaziemir Neoline Psikoloji ve Güzelbahçe Nar
-            Psikoloji'de çocuk/ergen ve ebeveyn çalışmalarımı sürdürmekteyim.
+            Psikoloji'de çocuk, ergen, yetişkin ve ebeveyn çalışmalarımı sürdürmekteyim.
           </p>
           <br />
           <span className="inline-block h-1 w-24 rounded bg-primary mt-8 mb-6"></span>
           <h2 className="text-gray-900 font-medium title-font tracking-wider text-lg">
             Zeynep Ezgi Kaya
           </h2>
-          <p className="text-gray-500">Uzman Psikolojik Danışman</p>
+          <p className="text-gray-600">Uzman Psikolojik Danışman</p>
         </div>
       </div>
     </section>

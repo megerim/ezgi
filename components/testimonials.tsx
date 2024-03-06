@@ -29,7 +29,7 @@ export default function Testimonials() {
               Online Terapi
             </h3>
             <p className="mt-6 text-base leading-7 text-gray-800">
-              Hemen randevu alın, terapiye başlayın.
+            Randevu talebinde bulunarak sizin için planlanabilecek ön görüşmeyi gerçekleştirebilirsiniz.
             </p>
             <div className="mt-10 flex items-center gap-x-4">
               <h4 className="flex-none text-sm font-semibold leading-6 text-primary">
@@ -81,8 +81,8 @@ export default function Testimonials() {
             </ul>
           </div>
         </div>
-        
         <Randevumodal />
+        
         
 
                 

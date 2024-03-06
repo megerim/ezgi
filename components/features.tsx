@@ -36,13 +36,7 @@ export default function Features() {
               className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
               data-aos="fade-right"
             >
-              {/* <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Nasıl bir hizmet anlayışım var?</h3>
-                <p className="text-xl text-gray-900">
-                  Çocuk, genç ve yetişkinlerle psikolojik danışma esasları
-                  çerçevesinde bir araya geldiğimiz görüşmelerde çerçevem:
-                </p>
-              </div> */}
+              
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
