@@ -7,7 +7,7 @@ export const metadata = {
   creator: 'Zeynep Ezgi Kaya',
   publisher: 'Zeynep Ezgi Kaya',
   title: 'Ana Sayfa - Zeynep Ezgi Kaya',
-  description: 'Ana Sayfa.',
+  description: 'Uzman Psikolojik Danışman Zeynep Ezgi Kaya, İzmir / Gaziemir. Online randevu alabilir, yazılarımı okuyabilir veya benimle ilgili daha fazla bilgi edinebilirsiniz.',
 }
 
 import Hero from '@/components/hero'

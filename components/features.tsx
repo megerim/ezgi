@@ -26,7 +26,7 @@ export default function Features() {
       <div className="relative bg-gray-200/50 border border-black/20 rounded-md max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-8">
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Nasıl bir hizmet anlayışım var?</h1>
+            <h2 className="h2 mb-4">Nasıl bir hizmet anlayışım var?</h2>
             <p className="text-xl text-gray-800">Çocuk, genç ve yetişkinlerle psikolojik danışma esasları
                   çerçevesinde bir araya geldiğimiz görüşmelerde çerçevem:</p>
           </div>

@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 import Link from "next/link";
 import Logo from "./logo";
-import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
 
 export default function Header() {
@@ -74,8 +73,10 @@ export default function Header() {
 
             <ul className="flex mb-4 md:order-1 mt-2 md:ml-4 md:mb-0">
               <li>
-                <a
-                  href="#0"
+                <Link
+                  href="https://twitter.com/ZeynepEzgiKAYA3"
+                  target="_blank"
+                  rel="noopener"
                   className="flex justify-center items-center text-gray-600 hover:text-white bg-white hover:bg-black ring-black ring-1 hover:ring-2  rounded-full shadow transition duration-300 ease-in-out"
                   aria-label="Twitter"
                 >
@@ -86,12 +87,14 @@ export default function Header() {
                   >
                     <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
                   </svg>
-                </a>
+                </Link>
               </li>
 
               <li className="ml-4">
-                <a
+                <Link
                   href="whatsapp://send?phone=+905436715805"
+                  target="_blank"
+                  rel="noopener"
                   className="flex justify-center items-center text-gray-600 hover:text-green-700 bg-white hover:bg-green-500 ring-green-600 ring-1 hover:ring-2  rounded-full shadow transition duration-300 ease-in-out"
                   aria-label="Whatsapp"
                 >
@@ -104,12 +107,14 @@ export default function Header() {
                       fillRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </li>
 
               <li className="ml-4">
-                <a
-                  href="#0"
+                <Link
+                  href="https://www.instagram.com/pd.zeynepezgikaya/"
+                  target="_blank"
+                  rel="noopener"
                   className="flex justify-center items-center bg-white hover:bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 ring-fuchsia-900 ring-1 hover:ring-2 rounded-full shadow transition duration-150 ease-in-out"
                   aria-label="Facebook"
                 >
@@ -136,7 +141,7 @@ export default function Header() {
                       />
                     </g>
                   </svg>
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   manifest: 'https://www.zeynepezgikaya.com/manifest.json',
   title: 'Zeynep Ezgi Kaya',
-  description: 'Uzman Psikolojik Danışman',
+  description: 'Uzman Psikolojik Danışman Zeynep Ezgi Kaya, İzmir / Gaziemir. Online randevu alabilir, yazılarımı okuyabilir veya benimle ilgili daha fazla bilgi edinebilirsiniz.',
 }
 
 export default function RootLayout({
