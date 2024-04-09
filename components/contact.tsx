@@ -61,7 +61,7 @@ export default function Contact() {
             style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
           ></iframe>
           <div className="bg-white relative flex flex-wrap py-6 mt-24 rounded shadow-md">
-            <div className="lg:w-1/3 px-6">
+            <div className="lg:w-1/3 px-3">
               <h2 className="title-font font-semibold text-gray-900 text-xs">
                 Neoline Psikoloji
               </h2>
