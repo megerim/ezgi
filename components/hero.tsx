@@ -1,13 +1,10 @@
-import VideoThumb from '@/public/images/hero-image.png'
+import VideoThumb from '@/public/images/hero-image.webp'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-b from-third to-primary">
-      
-
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 z-10">
 
         <div className="py-5">
