@@ -5,9 +5,7 @@ export default function ContactLayout({
   }) {  
     return (
       <main className="grow bgimage">
-  
         {children}
-  
       </main>
     )
   }

@@ -114,7 +114,7 @@ export default function Contact() {
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 rounded-xl p-5">
           <form onSubmit={handleSubmit} action="/api/contact">
-            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font text-center">
+            <h2 className="text-gray-900 text-2xl mb-1 font-bold text-center">
               İletişim
             </h2>
             <div className="relative mb-4">
@@ -179,7 +179,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-third hover:text-gray-800 rounded text-lg"
+              className="text-white bg-primary border-0 py-2 px-6 float-right focus:outline-none hover:bg-third hover:text-gray-800 rounded text-lg"
             >
               Gönder
             </button>
