@@ -25,7 +25,6 @@ export default function Contact() {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -57,8 +56,12 @@ export default function Contact() {
             height="100%"
             className="absolute inset-0"
             title="map"
-            src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-            style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
+            loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100175.02997642166!2d27.069205203577337!3d38.31495292045336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfe83b08bd8f%3A0xf8881ad570ba143f!2s35410%20Gaziemir%2F%C4%B0zmir!5e0!3m2!1str!2str!4v1712759269491!5m2!1str!2str"
+            style={{
+              filter: "grayscale(1) contrast(1.2) opacity(0.4)",
+              border: 0,
+            }}
           ></iframe>
           <div className="bg-white relative flex flex-wrap py-6 mt-24 rounded shadow-md">
             <div className="lg:w-1/3 px-3">
@@ -122,11 +125,12 @@ export default function Contact() {
                 İsim
               </label>
               <input
-                type="text" 
-                id="name" 
-                name="name" 
+                type="text"
+                id="name"
+                name="name"
                 value={formData.name}
                 onChange={handleChange}
+                required
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -141,8 +145,9 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
+                required
                 value={formData.email}
-      onChange={handleChange}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -157,8 +162,9 @@ export default function Contact() {
                 type="tel"
                 id="phone"
                 name="phone"
+                required
                 value={formData.phone}
-      onChange={handleChange}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -173,7 +179,8 @@ export default function Contact() {
                 id="message"
                 name="message"
                 value={formData.message}
-      onChange={handleChange}
+                required
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
@@ -184,6 +191,16 @@ export default function Contact() {
               Gönder
             </button>
           </form>
+          {submissionStatus === "success" && (
+            <p className="text-green-600 text-center text-sm font-semibold">
+              Mesajınız başarıyla gönderildi.
+            </p>
+          )}
+          {submissionStatus === "error" && (
+            <p className="text-rose-600 text-center text-sm font-semibold">
+              Hata oluştu.
+            </p>
+          )}
         </div>
       </div>
     </section>
