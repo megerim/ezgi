@@ -39,14 +39,6 @@ export default function Header() {
             <ul className="flex grow justify-center flex-wrap items-center">
               <li>
                 <Link
-                  href="/yazilar"
-                  className=" font-medium text-gray-900 hover:text-gray-600 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Yazılarım
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/about"
                   className="font-medium text-gray-900 hover:text-gray-600 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >

@@ -3,7 +3,7 @@ const people = [
     name: "Dikkatimi Topluyorum Programı",
     email: "Attentioner",
     role: "Başvuru Formu",
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: "images/atolyeler/minnettarlik.jpeg",
     lastSeen: "+1 Hafta önce",
     lastSeenDateTime: "2023-01-23T13:23Z",
   },
@@ -11,7 +11,8 @@ const people = [
     name: "Okula Uyum Atölyesi",
     email: "Oyun Atölyesi",
     role: "Başvuru Formu",
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: "images/atolyeler/minnettarlik2.jpeg",
+
     lastSeen: "2 hafta önce",
     lastSeenDateTime: "2023-01-23T13:23Z",
   },
@@ -19,14 +20,14 @@ const people = [
     name: "Kaygı Atölyesi",
     email: "Yetişkinlere Yönelik Atölye",
     role: "Başvuru Formu",
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: "images/atolyeler/kendimiaffetmek.jpeg",
     lastSeen: null,
   },
   {
     name: "Sınıfa Uyum Atölyesi",
     email: "Ergenlere Yönelik Eğitim Atölyesi",
     role: "Başvuru Formu",
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: "images/atolyeler/kendimiaffetmek2.jpeg",
     lastSeen: "3h ago",
     lastSeenDateTime: "2023-01-23T13:23Z",
   },
@@ -34,7 +35,7 @@ const people = [
     name: "Minnettarlık Atölyesi",
     email: "Yetişkinlere Yönelik Atölye",
     role: "Başvuru Formu",
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: "images/atolyeler/minnettarlik.jpeg",
     lastSeen: "3h ago",
     lastSeenDateTime: "2023-01-23T13:23Z",
   },
@@ -42,8 +43,9 @@ const people = [
     name: "Kendini Affetmek",
     email: "Yetişkinlere Yönelik Atölye",
     role: "Başvuru Formu",
-    imageUrl: "https://picsum.photos/200/300",
-    lastSeen: null,
+    imageUrl: "images/atolyeler/minnettarlik.jpeg",
+    lastSeen: "3h ago",
+    lastSeenDateTime: "2023-01-23T13:23Z",
   },
 ];
 
@@ -79,7 +81,7 @@ export default function Example() {
             </div>
             <div className="hidden md:flex shrink-0 sm:flex-col sm:items-center">
               <a
-                href="#"
+                href="/atolye/basvuru"
                 className="text-sm  text-fourth p-2 rounded-full hover:text-gray-700 bg-primary hover:bg-third  transition duration-300"
               >
                 {person.role}

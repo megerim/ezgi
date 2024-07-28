@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'Zeynep Ezgi Kaya',
     images: [
       {
-        url: 'https://www.zeynepezgikaya.com/images/logo.webp', // Must be an absolute URL
+        url: 'https://www.zeynepezgikaya.com/images/logo.webp',
         width: 160,
         height: 65,
         alt: 'Zeynep Ezgi Kaya Logo',
@@ -39,7 +39,6 @@ export const metadata: Metadata = {
     locale: 'tr_TR',
     type: 'website',
   },
-  themeColor: '#536B57',
   robots: {
     index: false,
     follow: true,
@@ -58,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Zeynep Ezgi Kaya',
     description: 'Uzman Psikolojik Danışman',
     creator: '@pd.zeynepezgikaya',
-    images: ['https://www.zeynepezgikaya.com/images/logo.webp'], // Must be an absolute URL
+    images: ['https://www.zeynepezgikaya.com/images/logo.webp'],
   },
   manifest: 'https://www.zeynepezgikaya.com/manifest.json',
   title: 'Zeynep Ezgi Kaya',
