@@ -13,7 +13,7 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-b from-gray-900 via-gray-700 to-primary" data-aos="zoom-y-out">Zeynep Ezgi KAYA<br/><span className="bg-clip-text text-3xl md:text-4xl text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-primary"> Uzman Psikolojik Danışman </span></h1>
             <div className="max-w-3xl mx-auto">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div className="relative rounded-full px-3 py-1 text-base leading-6 text-gray-100 ring-1 ring-gray-900/30 hover:ring-gray-900/50 hover:underline">
+        <div className="relative rounded-full px-3 py-1 text-base leading-6 text-gray-100 ring-1 ring-gray-900/30 hover:ring-gray-900/50 hover:underline" data-aos="zoom-x-out">
         Psikodrama Temelli Grup Oturumları "Ruhun Doysun" <Link href="/atolye" className="font-semibold text-indigo-600"><span className="absolute inset-0" aria-hidden="true"></span>Başvuru <span aria-hidden="true">&rarr;</span></Link>
         </div>
       </div>

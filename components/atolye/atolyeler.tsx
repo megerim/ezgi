@@ -10,7 +10,7 @@ export default function Example() {
       <div className="flex flex-col text-center w-full mt-5">
         <h1 className="text-3xl font-bold text-center">
           <span className="bg-clip-text text-3xl md:text-5xl text-transparent bg-gradient-to-br from-gray-900 via-gray-700 to-primary">
-            Atölyeler
+            Atölye Detayları
           </span>
         </h1>
       </div>
