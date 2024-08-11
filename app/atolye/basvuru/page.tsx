@@ -53,6 +53,7 @@ Bedeninizle kurduğunuz ilişkiyi daha iyi, daha ait hissederek tamamlayabilece�
 Dört hafta boyunca haftada üç saat psikodramatik yöntemler çerçevesinde ücretsiz olarak bir çemberde buluşmaya davetlisiniz. 
 Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için sizinle telefon yoluyla iletişime geçeceğim.
       </p>
+      <p className=' italic text-end'>Görüşmek dileği ile, Zeynep Ezgi Kaya.</p>
       <form action="#" method="post" className='mx-5'>
         <fieldset className="mb-6 p-4 border border-gray-300 rounded-lg">
           <legend className="text-lg font-semibold mb-4">Kişisel Bilgiler</legend>
@@ -62,7 +63,6 @@ Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için s
               type="text"
               id="input1"
               name="input1"
-              placeholder="Input 1"
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
@@ -73,7 +73,18 @@ Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için s
               type="text"
               id="input2"
               name="input2"
-              placeholder="Input 2"
+              placeholder="ornek@mail.com"
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="input3" className="block text-sm font-medium text-gray-700">Doğum Tarihi</label>
+            <input
+              type="text"
+              id="input3"
+              name="input3"
+              placeholder="GG/AA/YYYY"
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
@@ -82,68 +93,69 @@ Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için s
 
         <fieldset className="mb-6 p-4 border border-gray-300 rounded-lg">
           <legend className="text-lg font-semibold mb-4">Ek Bilgiler</legend>
+          
           <div className="mb-4">
-            <label htmlFor="input3" className="block text-sm font-medium text-gray-700">Input 3</label>
+            <label htmlFor="input3" className="inline-block text-sm font-medium text-gray-700">Çalışmaya Katılmayı Onaylıyorum</label>
+            
             <input
-              type="text"
+              type="checkbox"
               id="input3"
               name="input3"
-              placeholder="Input 3"
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="mt-1 inline-block px-4 py-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm float-right"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="input4" className="block text-sm font-medium text-gray-700">Input 4</label>
+            <label htmlFor="input4" className="block text-sm font-medium text-gray-700">Meslek</label>
             <input
               type="text"
               id="input4"
               name="input4"
-              placeholder="Input 4"
+
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="input5" className="block text-sm font-medium text-gray-700">Input 5</label>
+            <label htmlFor="input5" className="block text-sm font-medium text-gray-700">Cep Telefonu</label>
             <input
               type="text"
               id="input5"
               name="input5"
-              placeholder="Input 5"
+              placeholder="+905xxxxxxxxxx"
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="input6" className="block text-sm font-medium text-gray-700">Input 6</label>
+            <label htmlFor="input6" className="block text-sm font-medium text-gray-700">Çalışmaya katılırken taşıdığınız beklentiler neler, aklınızda hangi sorular var, bu çalışmadan ne alarak ayrılmak istiyorsunuz?</label>
             <input
               type="text"
               id="input6"
               name="input6"
-              placeholder="Input 6"
+
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="input7" className="block text-sm font-medium text-gray-700">Input 7</label>
+            <label htmlFor="input7" className="block text-sm font-medium text-gray-700">Daha önce hiç bu tarz bir atölyeye katıldınız mı? Katıldaysanız yazabilir misiniz?</label>
             <input
               type="text"
               id="input7"
               name="input7"
-              placeholder="Input 7"
+
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="input8" className="block text-sm font-medium text-gray-700">Input 8</label>
+            <label htmlFor="input8" className="block text-sm font-medium text-gray-700">Eklemek istediğiniz bir şey var mı?</label>
             <input
               type="text"
               id="input8"
               name="input8"
-              placeholder="Input 8"
+
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
@@ -151,7 +163,8 @@ Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için s
         </fieldset>
 
         <fieldset className="mb-6 p-4 border border-gray-300 rounded-lg">
-          <legend className="text-lg font-semibold mb-4">Zaman Seçenekleri</legend>
+          <legend className="text-lg font-semibold mb-2">Zaman Seçenekleri</legend>
+          <p className='text-xs font-light text-end'>Kendinize uygun gün ve saat seçimi yapınız, ortak seçime göre zaman değişiklik gösterecektir.</p>
           <div className="mb-4">
             <label htmlFor="day" className="block text-sm font-medium text-gray-700">Gün Seçimi</label>
             <select
