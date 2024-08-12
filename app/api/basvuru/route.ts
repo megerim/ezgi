@@ -1,69 +1,78 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    const {
-      input1,
-      input2,
-      input3,
-      input4,
-      input5,
-      input6,
-      input7,
-      input8,
-      day,
-      timezone,
-    } = req.body;
+interface FormData {
+  input1: string; // Name
+  input2: string; // Email
+  input3: string; // Birthdate
+  input4: string; // Profession
+  input5: string; // Phone
+  input6: string; // Expectations
+  input7: string; // Previous experience
+  input8: string; // Additional info
+  day: string; // Day selection
+  timezone: string; // Time selection
+}
 
-    // Create a transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER, // your Gmail address
-        pass: process.env.EMAIL_PASSWORD, // your Gmail password or app password
-      },
-    });
+export async function POST(req: NextRequest) {
+  const { formData } = await req.json() as { formData: FormData };
 
-    try {
-      // Send mail with defined transport object
-      await transporter.sendMail({
-        from: `"Başvuru Formu" <${process.env.GMAIL_USER}>`, // sender address
-        to: process.env.RECIPIENT_EMAIL, // recipient address
-        subject: 'Yeni Başvuru Formu', // Subject line
-        text: `Yeni bir başvuru formu alındı:
-        - İsim Soyisim: ${input1}
-        - E-Mail: ${input2}
-        - Doğum Tarihi: ${input3}
-        - Meslek: ${input4}
-        - Cep Telefonu: ${input5}
-        - Beklentiler: ${input6}
-        - Daha önce katılım: ${input7}
-        - Ek bilgi: ${input8}
-        - Gün Seçimi: ${day}
-        - Saat Seçimi: ${timezone}
-        `,
-        html: `<p><strong>Yeni bir başvuru formu alındı:</strong></p>
-               <ul>
-                 <li><strong>İsim Soyisim:</strong> ${input1}</li>
-                 <li><strong>E-Mail:</strong> ${input2}</li>
-                 <li><strong>Doğum Tarihi:</strong> ${input3}</li>
-                 <li><strong>Meslek:</strong> ${input4}</li>
-                 <li><strong>Cep Telefonu:</strong> ${input5}</li>
-                 <li><strong>Beklentiler:</strong> ${input6}</li>
-                 <li><strong>Daha önce katılım:</strong> ${input7}</li>
-                 <li><strong>Ek bilgi:</strong> ${input8}</li>
-                 <li><strong>Gün Seçimi:</strong> ${day}</li>
-                 <li><strong>Saat Seçimi:</strong> ${timezone}</li>
-               </ul>`,
-      });
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+    return NextResponse.json(
+      { success: false, message: 'Email user or password not configured' },
+      { status: 500 }
+    );
+  }
 
-      res.status(200).json({ message: 'Email sent successfully' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      res.status(500).json({ message: 'Error sending email' });
-    }
-  } else {
-    res.status(405).json({ message: 'Only POST requests are allowed' });
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
+
+  const mailOptions = {
+    from: formData.input2, // Sender's email from the form
+    to: process.env.RECIPIENT_EMAIL, // The recipient's email
+    subject: "Yeni Başvuru Formu",
+    text: `
+      İsim: ${formData.input1}
+      Email: ${formData.input2}
+      Doğum Tarihi: ${formData.input3}
+      Meslek: ${formData.input4}
+      Telefon: ${formData.input5}
+      Beklentiler: ${formData.input6}
+      Önceki Deneyim: ${formData.input7}
+      Ek Bilgi: ${formData.input8}
+      Gün Seçimi: ${formData.day}
+      Saat Seçimi: ${formData.timezone}
+    `,
+    html: `<div>
+             <p><b>İsim:</b> ${formData.input1}</p>
+             <p><b>Email:</b> ${formData.input2}</p>
+             <p><b>Doğum Tarihi:</b> ${formData.input3}</p>
+             <p><b>Meslek:</b> ${formData.input4}</p>
+             <p><b>Telefon:</b> ${formData.input5}</p>
+             <p><b>Beklentiler:</b> ${formData.input6}</p>
+             <p><b>Önceki Deneyim:</b> ${formData.input7}</p>
+             <p><b>Ek Bilgi:</b> ${formData.input8}</p>
+             <p><b>Gün Seçimi:</b> ${formData.day}</p>
+             <p><b>Saat Seçimi:</b> ${formData.timezone}</p>
+           </div>`,
+  };
+  
+  try {
+    const result = await transporter.sendMail(mailOptions);
+    return NextResponse.json(
+      { success: true, message: 'Email sent successfully', result },
+      { status: 200 }
+    );
+  } catch (error: any) {
+    console.error("Error sending email:", error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to send email', errorDetails: error.message },
+      { status: 500 }
+    );
   }
 }
