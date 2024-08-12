@@ -39,13 +39,13 @@ export default function BasvuruForm() {
       });
 
       if (response.ok) {
-        alert('Form submitted and email sent successfully!');
+        alert('Başvuru formunuz başarıyla gönderildi.');
       } else {
-        alert('Failed to submit the form.');
+        alert('Başvuru formu gönderilirken bir hata oluştu.');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('An error occurred while submitting the form.');
+      console.error('Hata:', error);
+      alert('Hata oluştu.');
     }
   };
 
