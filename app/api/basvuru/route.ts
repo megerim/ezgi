@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
   const mailOptions = {
     from: process.env.EMAIL_USER, // Sender's email from the form
-    to: process.env.RECIPIENT_EMAIL || 'pdzeynepezgikaya@gmail.com', // The recipient's email
+    to: 'merimgokhan@gmail.com', // The recipient's email
     subject: "Yeni Başvuru Formu",
     text: `
       İsim: ${formData.input1}

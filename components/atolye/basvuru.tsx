@@ -4,25 +4,34 @@ import React, { useState } from 'react';
 
 export default function BasvuruForm() {
   const [formData, setFormData] = useState({
-    input1: '',
-    input2: '',
-    input3: '',
-    input4: '',
-    input5: '',
-    input6: '',
-    input7: '',
-    input8: '',
+    name: '',
+    email: '',
+    birthdate: '',
+    agreement: false,
+    occupation: '',
+    phone: '',
+    expectations: '',
+    previousExperience: '',
+    additionalInfo: '',
     day: '',
     timezone: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    const { name, value, type } = e.target;
+    if (type === 'checkbox') {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: (e.target as HTMLInputElement).checked, // 'checked' değerini burada kullanıyoruz
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
+  
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,7 +44,7 @@ export default function BasvuruForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({formData}),
+        body: JSON.stringify({ formData }),
       });
 
       if (response.ok) {
@@ -62,28 +71,28 @@ export default function BasvuruForm() {
           Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için sizinle telefon yoluyla iletişime geçeceğim.
         </p>
         <p className='italic text-end m-0.5'>Görüşmek dileği ile, Zeynep Ezgi Kaya.</p>
-        <form onSubmit={handleFormSubmit} action="/api/basvuru" method="post" className='mx-5'>
+        <form onSubmit={handleFormSubmit} className='mx-5'>
           <fieldset className="mb-6 p-4 border border-gray-300 rounded-lg">
             <legend className="text-lg font-semibold mb-4">Kişisel Bilgiler</legend>
             <div className="mb-4">
-              <label htmlFor="input1" className="block text-sm font-medium text-gray-700">İsim Soyisim</label>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">İsim Soyisim</label>
               <input
                 type="text"
-                id="input1"
-                name="input1"
-                value={formData.input1}
+                id="name"
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="input2" className="block text-sm font-medium text-gray-700">E-Mail</label>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">E-Mail</label>
               <input
-                type="text"
-                id="input2"
-                name="input2"
-                value={formData.input2}
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
                 placeholder="ornek@mail.com"
                 required
@@ -91,12 +100,12 @@ export default function BasvuruForm() {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="input3" className="block text-sm font-medium text-gray-700">Doğum Tarihi</label>
+              <label htmlFor="birthdate" className="block text-sm font-medium text-gray-700">Doğum Tarihi</label>
               <input
                 type="text"
-                id="input3"
-                name="input3"
-                value={formData.input3}
+                id="birthdate"
+                name="birthdate"
+                value={formData.birthdate}
                 onChange={handleChange}
                 placeholder="GG/AA/YYYY"
                 required
@@ -108,36 +117,36 @@ export default function BasvuruForm() {
           <fieldset className="mb-6 p-4 border border-gray-300 rounded-lg">
             <legend className="text-lg font-semibold mb-4">Ek Bilgiler</legend>
             <div className="mb-4">
-              <label htmlFor="input3" className="inline-block text-sm font-medium text-gray-700">Çalışmaya Katılmayı Onaylıyorum</label>
+              <label htmlFor="agreement" className="inline-block text-sm font-medium text-gray-700">Çalışmaya Katılmayı Onaylıyorum</label>
               <input
                 type="checkbox"
-                id="input3"
-                name="input3"
-                value={formData.input3}
+                id="agreement"
+                name="agreement"
+                checked={formData.agreement}
                 onChange={handleChange}
                 required
                 className="mt-1 inline-block px-4 py-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm float-right"
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="input4" className="block text-sm font-medium text-gray-700">Meslek</label>
+              <label htmlFor="occupation" className="block text-sm font-medium text-gray-700">Meslek</label>
               <input
                 type="text"
-                id="input4"
-                name="input4"
-                value={formData.input4}
+                id="occupation"
+                name="occupation"
+                value={formData.occupation}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="input5" className="block text-sm font-medium text-gray-700">Cep Telefonu</label>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Cep Telefonu</label>
               <input
                 type="text"
-                id="input5"
-                name="input5"
-                value={formData.input5}
+                id="phone"
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
                 placeholder="+905xxxxxxxxxx"
                 required
@@ -145,36 +154,36 @@ export default function BasvuruForm() {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="input6" className="block text-sm font-medium text-gray-700">Çalışmaya katılırken taşıdığınız beklentiler neler, aklınızda hangi sorular var, bu çalışmadan ne alarak ayrılmak istiyorsunuz?</label>
+              <label htmlFor="expectations" className="block text-sm font-medium text-gray-700">Çalışmaya katılırken taşıdığınız beklentiler neler, aklınızda hangi sorular var, bu çalışmadan ne alarak ayrılmak istiyorsunuz?</label>
               <input
                 type="text"
-                id="input6"
-                name="input6"
-                value={formData.input6}
+                id="expectations"
+                name="expectations"
+                value={formData.expectations}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="input7" className="block text-sm font-medium text-gray-700">Daha önce hiç bu tarz bir atölyeye katıldınız mı? Katıldaysanız yazabilir misiniz?</label>
+              <label htmlFor="previousExperience" className="block text-sm font-medium text-gray-700">Daha önce hiç bu tarz bir atölyeye katıldınız mı? Katıldaysanız yazabilir misiniz?</label>
               <input
                 type="text"
-                id="input7"
-                name="input7"
-                value={formData.input7}
+                id="previousExperience"
+                name="previousExperience"
+                value={formData.previousExperience}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="input8" className="block text-sm font-medium text-gray-700">Eklemek istediğiniz bir şey var mı?</label>
+              <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700">Eklemek istediğiniz bir şey var mı?</label>
               <input
                 type="text"
-                id="input8"
-                name="input8"
-                value={formData.input8}
+                id="additionalInfo"
+                name="additionalInfo"
+                value={formData.additionalInfo}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
