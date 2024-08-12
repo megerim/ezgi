@@ -15,7 +15,14 @@ interface FormData {
 }
 
 export async function POST(req: NextRequest) {
-  const formData = await req.json() as FormData; // Directly extract the form data
+  if (req.headers.get('content-type') !== 'application/json') {
+    return NextResponse.json(
+      { success: false, message: 'Invalid content type' },
+      { status: 400 }
+    );
+  }
+
+  const formData = await req.json() as FormData;
 
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
     console.error('Email user or password not configured');
@@ -34,8 +41,8 @@ export async function POST(req: NextRequest) {
   });
 
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Sender's email from the form
-    to: 'merimgokhan@gmail.com', // The recipient's email
+    from: process.env.EMAIL_USER,
+    to: 'merimgokhan@gmail.com',
     subject: "Yeni Başvuru Formu",
     text: `
       İsim: ${formData.input1}
@@ -64,16 +71,24 @@ export async function POST(req: NextRequest) {
   };
 
   try {
-  const result = await transporter.sendMail(mailOptions);
-  return NextResponse.json(
-    { success: true, message: 'Email sent successfully', result },
-    { status: 200 }
-  );
-} catch (error: any) {
-  console.error('Error sending email:', error.message, error.stack);
-  return NextResponse.json(
-    { success: false, message: 'Failed to send email', errorDetails: error.message },
-    { status: 500 }
-  );
-}
+    const result = await transporter.sendMail(mailOptions);
+    return NextResponse.json(
+      { success: true, message: 'Email sent successfully', result },
+      { status: 200 }
+    );
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error('Error sending email:', error.message, error.stack);
+      return NextResponse.json(
+        { success: false, message: 'Failed to send email', errorDetails: error.message },
+        { status: 500 }
+      );
+    } else {
+      console.error('Unknown error:', error);
+      return NextResponse.json(
+        { success: false, message: 'Failed to send email' },
+        { status: 500 }
+      );
+    }
+  }
 }
