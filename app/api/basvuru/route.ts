@@ -2,27 +2,24 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 interface FormData {
-  input1: string; // Name
-  input2: string; // Email
-  input3: string; // Birthdate
-  input4: string; // Profession
-  input5: string; // Phone
-  input6: string; // Expectations
-  input7: string; // Previous experience
-  input8: string; // Additional info
+  name: string; // Name
+  email: string; // Email
+  birthdate: string; // Birthdate
+  agreement: boolean; // Agreement
+  occupation: string; // Profession
+  phone: string; // Phone
+  expectations: string; // Expectations
+  previousExperience: string; // Previous experience
+  additionalInfo: string; // Additional info
   day: string; // Day selection
   timezone: string; // Time selection
 }
 
-export async function POST(req: NextRequest) {
-  if (req.headers.get('content-type') !== 'application/json') {
-    return NextResponse.json(
-      { success: false, message: 'Invalid content type' },
-      { status: 400 }
-    );
-  }
 
+export async function POST(req: NextRequest) {
   const formData = await req.json() as FormData;
+
+  console.log('Received form data:', formData);  // Gelen veriyi kontrol edin
 
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
     console.error('Email user or password not configured');
@@ -45,26 +42,26 @@ export async function POST(req: NextRequest) {
     to: 'merimgokhan@gmail.com',
     subject: "Yeni Başvuru Formu",
     text: `
-      İsim: ${formData.input1}
-      Email: ${formData.input2}
-      Doğum Tarihi: ${formData.input3}
-      Meslek: ${formData.input4}
-      Telefon: ${formData.input5}
-      Beklentiler: ${formData.input6}
-      Önceki Deneyim: ${formData.input7}
-      Ek Bilgi: ${formData.input8}
+      İsim: ${formData.name}
+      Email: ${formData.email}
+      Doğum Tarihi: ${formData.birthdate}
+      Meslek: ${formData.occupation}
+      Telefon: ${formData.phone}
+      Beklentiler: ${formData.expectations}
+      Önceki Deneyim: ${formData.previousExperience}
+      Ek Bilgi: ${formData.additionalInfo}
       Gün Seçimi: ${formData.day}
       Saat Seçimi: ${formData.timezone}
     `,
     html: `<div>
-             <p><b>İsim:</b> ${formData.input1}</p>
-             <p><b>Email:</b> ${formData.input2}</p>
-             <p><b>Doğum Tarihi:</b> ${formData.input3}</p>
-             <p><b>Meslek:</b> ${formData.input4}</p>
-             <p><b>Telefon:</b> ${formData.input5}</p>
-             <p><b>Beklentiler:</b> ${formData.input6}</p>
-             <p><b>Önceki Deneyim:</b> ${formData.input7}</p>
-             <p><b>Ek Bilgi:</b> ${formData.input8}</p>
+             <p><b>İsim:</b> ${formData.name}</p>
+             <p><b>Email:</b> ${formData.email}</p>
+             <p><b>Doğum Tarihi:</b> ${formData.birthdate}</p>
+             <p><b>Meslek:</b> ${formData.occupation}</p>
+             <p><b>Telefon:</b> ${formData.phone}</p>
+             <p><b>Beklentiler:</b> ${formData.expectations}</p>
+             <p><b>Önceki Deneyim:</b> ${formData.previousExperience}</p>
+             <p><b>Ek Bilgi:</b> ${formData.additionalInfo}</p>
              <p><b>Gün Seçimi:</b> ${formData.day}</p>
              <p><b>Saat Seçimi:</b> ${formData.timezone}</p>
            </div>`,
