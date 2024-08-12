@@ -17,7 +17,7 @@ interface FormData {
 
 
 export async function POST(req: NextRequest) {
-  const formData = await req.json() as FormData;
+  const { formData } = await req.json() as { formData: FormData }; // Destructure formData from the request body
 
   console.log('Received form data:', formData);  // Gelen veriyi kontrol edin
 
@@ -89,3 +89,4 @@ export async function POST(req: NextRequest) {
     }
   }
 }
+
