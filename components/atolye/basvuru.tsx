@@ -206,10 +206,10 @@ export default function BasvuruForm() {
                 <option value="" disabled hidden>
                   Gün Seçin
                 </option>
-                <option value="monday">Pazartesi</option>
-                <option value="thursday">Perşembe</option>
-                <option value="saturday">Cumartesi</option>
-                <option value="sunday">Pazar</option>
+                <option value="Pazartesi">Pazartesi</option>
+                <option value="Perşembe">Perşembe</option>
+                <option value="Cumartesi">Cumartesi</option>
+                <option value="Pazar">Pazar</option>
               </select>
             </div>
 
