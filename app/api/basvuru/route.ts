@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'merimgokhan@gmail.com',
+    to: 'pdzeynepezgikaya@gmail.com',
     subject: "Yeni Başvuru Formu",
     text: `
       İsim: ${formData.name}
