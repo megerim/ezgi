@@ -5,17 +5,17 @@ import AtolyeIMG from "@/public/images/atolyeler/atolye.jpeg"
 
 export default function Example() {
   return (
-    <section className="md:px-32 md:py-20 bgimage">
-      <div className=" bg-white/40 backdrop-blur-md  rounded-md md:px-12 md:py-2">
+    <section className="px-5 py-12 md:px-32 md:py-20 bgimage">
+      <div className=" bg-white/40 backdrop-blur-md  rounded-md md:px-12 md:py-2 px-5">
       <div className="flex flex-col text-center w-full mt-5">
         <h1 className="text-3xl font-bold text-center">
-          <span className="bg-clip-text text-3xl md:text-5xl text-transparent bg-gradient-to-br from-gray-900 via-gray-700 to-primary">
+          <span className="bg-clip-text text-4xl md:text-5xl text-transparent bg-gradient-to-br from-gray-900 via-gray-700 to-primary">
             Atölye Detayları
           </span>
         </h1>
       </div>
 
-    <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-8 bg-background">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-5 bg-background">
     <div className="flex-1 max-w-[700px] space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Psikodrama Temelli Grup Oturumları Ruhun Doysun</h1>
         <p className="text-muted-foreground text-lg">
