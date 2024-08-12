@@ -13,8 +13,8 @@ export default function BasvuruForm() {
     expectations: '',
     previousExperience: '',
     additionalInfo: '',
-    day: '',
-    timezone: '',
+    day: '', // Default empty string
+    timezone: '', // Default empty string
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -22,7 +22,7 @@ export default function BasvuruForm() {
     if (type === 'checkbox') {
       setFormData((prevData) => ({
         ...prevData,
-        [name]: (e.target as HTMLInputElement).checked, // 'checked' değerini burada kullanıyoruz
+        [name]: (e.target as HTMLInputElement).checked,
       }));
     } else {
       setFormData((prevData) => ({
@@ -31,7 +31,6 @@ export default function BasvuruForm() {
       }));
     }
   };
-  
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -204,6 +203,9 @@ export default function BasvuruForm() {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
               >
+                <option value="" disabled hidden>
+                  Gün Seçin
+                </option>
                 <option value="monday">Pazartesi</option>
                 <option value="thursday">Perşembe</option>
                 <option value="saturday">Cumartesi</option>
@@ -221,6 +223,9 @@ export default function BasvuruForm() {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
               >
+                <option value="" disabled hidden>
+                  Saat Seçin
+                </option>
                 <option value="10-13">10:00 - 13:00</option>
                 <option value="11-14">11:00 - 14:00</option>
                 <option value="12-15">12:00 - 15:00</option>
