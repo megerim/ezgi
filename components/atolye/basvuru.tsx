@@ -62,7 +62,7 @@ export default function BasvuruForm() {
           Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için sizinle telefon yoluyla iletişime geçeceğim.
         </p>
         <p className='italic text-end m-0.5'>Görüşmek dileği ile, Zeynep Ezgi Kaya.</p>
-        <form onSubmit={handleFormSubmit} method="post" className='mx-5'>
+        <form onSubmit={handleFormSubmit} action="/api/basvuru" method="post" className='mx-5'>
           <fieldset className="mb-6 p-4 border border-gray-300 rounded-lg">
             <legend className="text-lg font-semibold mb-4">Kişisel Bilgiler</legend>
             <div className="mb-4">
