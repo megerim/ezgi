@@ -15,7 +15,6 @@ interface FormData {
 }
 
 export async function POST(req: NextRequest) {
-  try {
     const { formData } = await req.json() as { formData: FormData };
 
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
@@ -35,7 +34,7 @@ export async function POST(req: NextRequest) {
     });
 
     const mailOptions = {
-      from: formData.input2, // Sender's email from the form
+      from: process.env.EMAIL_USER, // Sender's email from the form
       to: process.env.RECIPIENT_EMAIL || 'pdzeynepezgikaya@gmail.com', // The recipient's email
       subject: "Yeni Başvuru Formu",
       text: `
@@ -64,6 +63,7 @@ export async function POST(req: NextRequest) {
              </div>`,
     };
 
+    try {
     const result = await transporter.sendMail(mailOptions);
     return NextResponse.json(
       { success: true, message: 'Email sent successfully', result },
