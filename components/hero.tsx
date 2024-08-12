@@ -14,7 +14,7 @@ export default function Hero() {
             <div className="max-w-3xl mx-auto">
             <div className=" sm:mb-8 flex sm:justify-center">
         <div className="relative rounded-full px-3 py-2 my-3 text-base leading-6 text-gray-100 ring-1 ring-gray-900/30 hover:ring-gray-900/50 " data-aos="zoom-x-out">
-        <span className='hover-underline-animation'>Psikodrama Temelli Grup Oturumları "Ruhun Doysun" <Link href="/atolye" className="font-semibold text-indigo-600"><span className="absolute inset-0" aria-hidden="true"></span>Başvuru <span aria-hidden="true">&rarr;</span></Link></span>
+        <span className='hover-underline-animation'>Psikodrama Temelli Grup Oturumları "Ruhun Doysun" <Link href="/atolye/basvuru" className="font-semibold text-indigo-600"><span className="absolute inset-0" aria-hidden="true"></span>Başvuru <span aria-hidden="true">&rarr;</span></Link></span>
         </div>
       </div>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">

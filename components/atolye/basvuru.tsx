@@ -59,7 +59,7 @@ export default function BasvuruForm() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg pt-36 shadow-2xl drop-shadow-2xl">
-      <div className="mx-8">
+      <div className="mx-1 md:mx-8">
         <h2 className='font-bold text-xl border-l-4 p-1'>Başvuru Formu</h2>
         <p className='py-4'>
           &nbsp; Merhaba!
@@ -192,7 +192,6 @@ export default function BasvuruForm() {
 
           <fieldset className="mb-6 p-4 border border-gray-300 rounded-lg">
             <legend className="text-lg font-semibold mb-2">Zaman Seçenekleri</legend>
-            <p className='text-xs font-light text-end'>Kendinize uygun gün ve saat seçimi yapınız, ortak seçime göre zaman değişiklik gösterecektir.</p>
             <div className="mb-4">
               <label htmlFor="day" className="block text-sm font-medium text-gray-700">Gün Seçimi</label>
               <select
@@ -233,7 +232,9 @@ export default function BasvuruForm() {
                 <option value="16-19">16:00 - 19:00</option>
                 <option value="19-21">19:00 - 21:00</option>
               </select>
+
             </div>
+            <p className='text-xs font-light text-end'>*Çalışmamızın saati ve tarihi çoğunluğun seçimine göre belirlenecektir.</p>
           </fieldset>
 
           <button
