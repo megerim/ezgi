@@ -16,6 +16,15 @@ export default function Example() {
       </div>
 
     <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-8 bg-background">
+    <div className="flex-1 max-w-[700px] space-y-4">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Psikodrama Temelli Grup Oturumları Ruhun Doysun</h1>
+        <p className="text-muted-foreground text-lg">
+        Merhaba! Tükettiklerinizle doymuyorsanız; aynaya baktığınızda iyi hissetmiyorsanız ve ya çok düşkün olduğunuz sabit yiyecekler varsa bu grup çalışması sizin için. Bedeninizle kurduğunuz ilişkiyi daha iyi, daha ait hissederek tamamlayabileceğiniz bir yolculuğa çıkacağımız bir yöntem sunmayı planlıyorum. Sürdüğünüz ojenin rengine ait hissetmediğiniz anlarla ve ya içinde rahat hissetmediğiniz kıyafetlerinizle barışmak mümkün mü? Dört hafta boyunca haftada üç saat psikodramatik yöntemler çerçevesinde ücretsiz olarak bir çemberde buluşmaya davetlisiniz. Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için sizinle telefon yoluyla iletişime geçeceğim.
+        </p>
+        <Link href="/atolye/basvuru" className="btn text-white bg-primary hover:bg-third hover:text-black duration-500 w-full mb-4 hover:ring-2 hover:ring-white sm:w-auto sm:mb-0 flex">BAŞVURU FORMU</Link>
+
+      </div>
+      
       <div className="flex-1 max-w-[900px]">
         <Image
           src={AtolyeIMG}
@@ -26,14 +35,7 @@ export default function Example() {
           style={{ aspectRatio: "600/600", objectFit: "cover" }}
         />
       </div>
-      <div className="flex-1 max-w-[700px] space-y-4">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Psikodrama Temelli Grup Oturumları Ruhun Doysun</h1>
-        <p className="text-muted-foreground text-lg">
-        Merhaba! Tükettiklerinizle doymuyorsanız; aynaya baktığınızda iyi hissetmiyorsanız ve ya çok düşkün olduğunuz sabit yiyecekler varsa bu grup çalışması sizin için. Bedeninizle kurduğunuz ilişkiyi daha iyi, daha ait hissederek tamamlayabileceğiniz bir yolculuğa çıkacağımız bir yöntem sunmayı planlıyorum. Sürdüğünüz ojenin rengine ait hissetmediğiniz anlarla ve ya içinde rahat hissetmediğiniz kıyafetlerinizle barışmak mümkün mü? Dört hafta boyunca haftada üç saat psikodramatik yöntemler çerçevesinde ücretsiz olarak bir çemberde buluşmaya davetlisiniz. Yeni bir siz ile tanışmak için; formu doldurmanız yeterli. Koşullar için sizinle telefon yoluyla iletişime geçeceğim.
-        </p>
-        <Link href="/atolye/basvuru" className="btn text-white bg-primary hover:bg-third hover:text-black duration-500 w-full mb-4 hover:ring-2 hover:ring-white sm:w-auto sm:mb-0 flex">BAŞVURU FORMU</Link>
-
-      </div>
+      
     </div>
     
     </div>
