@@ -103,9 +103,9 @@ export default function RootLayout({
 
         <Analytics />
       </body>
-      <GoogleAnalytics gaId="G-XV4HRT4ZN0" />
+      <GoogleAnalytics gaId="G-SR4CR7RKSN" />
 
-      <GoogleTagManager gtmId="GTM-PXTM6M75" />
+      <GoogleTagManager gtmId="GTM-NCHTTPXB" />
     </html>
   );
 }
